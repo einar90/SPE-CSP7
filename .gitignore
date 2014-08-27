@@ -1,3 +1,13 @@
 *.SMSPEC
 *.UNSMRY
 *.PRT
+*.ECLEND
+*.GRID
+*.INSPEC
+*.DBG
+*.EGRID
+*.INIT
+*.MSG
+*.RSSPEC
+*.UNRST
+

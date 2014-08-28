@@ -8,8 +8,8 @@ TITLE
 HORIZONTAL WELL MODEL
 
 DIMENS
--- X    Y    Z
-   9    9    6  /
+--  X  Y  Z
+    9  9  6  /
 
 NONNC
 
@@ -32,7 +32,7 @@ EQLDIMS
 --     RSWVD, RTEMPVD, PBVD or PDVD table entered.            = 2
 --  4: Max number of TVDP tables (init. tracer concentration) = 1
 --  5: Max number of depth nodes in any TVDP table.
-    1  100    2    1    2 /
+    1  100  2  1  2  /
 
 EQLOPTS
     QUIESC  MOBILE  /
@@ -45,7 +45,7 @@ TABDIMS
 --  4: Max number of pressure nodes in any PVT table          = 15
 --  5: Max number of FIP regions defined using FIPNUM         = 1
 --  6: Max number of R_s nodes in a live oil PVT table        = 15
-    1    1   15   15    1   15 /
+    1  1  15  15  1  15   /
 
 WELLDIMS
 -- Well dimension data
@@ -53,13 +53,13 @@ WELLDIMS
 --  2: Max number of connections per well = 16
 --  3: Max number of groups in the model  = 1
 --  4: Max number of wells in each group  = 2
-    2   16    1    2 /
+    2  16  1  2 /
 
 START
-   1 'JAN' 1990  /
+    1  JAN  1990  /
 
 NSTACK
-   25 /
+    25  /
 
 UNIFOUT
 UNIFIN
@@ -74,34 +74,29 @@ GRID
 NOECHO
 
 GRIDFILE
-    2    /
+    2  /
 
 DXV
 -- Vector of X-direction grid block sizes
-   9*300
-/
+    9*300  /
 
 DYV
 -- Vector of Y-direction grid block sizes
-  620 400 200 100 60 100 200 400 620
-/
+    620  400  200  100  60  100  200  400  620  /
 
 DZ
 -- Z-direction grid block sizes
-   81*20 81*20 81*20 81*20
-   81*30 81*50
-/
+    81*20  81*20  81*20  81*20  81*30  81*50  /
 
 TOPS
 -- Depth of top face of topmost grid blocks
-   81*3590
-/
+    81*3590  /
 
 EQUALS
-   'PORO'    0.207    /
-   'PERMX'   300      /
-   'PERMY'   300      /
-   'PERMZ'   30       /
+    PORO    0.207  /
+    PERMX   300    /
+    PERMY   300    /
+    PERMZ   30     /
 /
 
 INIT
@@ -114,21 +109,21 @@ PROPS
 
 PVDG
 -- PVT Properties of dry gas
--- P_g     B_g   mu_g
-   400     5.90  0.0130
-   800     2.95  0.0135
-   1200    1.96  0.0140
-   1600    1.47  0.0145
-   2000    1.18  0.0150
-   2400    0.98  0.0155
-   2800    0.84  0.0160
-   3200    0.74  0.0165
-   3600    0.65  0.0170
-   4000    0.59  0.0175
-   4400    0.54  0.0180
-   4800    0.49  0.0185
-   5200    0.45  0.0190
-   5600    0.42  0.0195
+--  P_g    B_g   mu_g
+    400    5.90  0.0130
+    800    2.95  0.0135
+    1200   1.96  0.0140
+    1600   1.47  0.0145
+    2000   1.18  0.0150
+    2400   0.98  0.0155
+    2800   0.84  0.0160
+    3200   0.74  0.0165
+    3600   0.65  0.0170
+    4000   0.59  0.0175
+    4400   0.54  0.0180
+    4800   0.49  0.0185
+    5200   0.45  0.0190
+    5600   0.42  0.0195
 /
 
 PVTO
@@ -225,19 +220,19 @@ SWFN
 
 RPTPROPS
 -- Properties output control
-   1   1   1   1   1   1   1   0   1   1   /
+    1   1   1   1   1   1   1   0   1   1   /
 
 SOLUTION
 
 RSVD
--- R_s vs. depth
-   3600.0  1.3900
-   3700.0  1.39
+--  R_s vs. depth
+    3600.0  1.3900
+    3700.0  1.39
 /
 PBVD
--- P_bp vs. depth
-  3600.0   3600
-  3700.0   3600
+--  P_bp vs. depth
+    3600.0   3600
+    3700.0   3600
 /
 EQUIL
 -- Equilibriation data specifiaction
@@ -252,14 +247,14 @@ EQUIL
 --  8: Initialization type for black oil with wet gas. Zero -> R_v = R_v@GOC
 --  9: Accuracy of initial fluids in place calculation.
 -- 3600.00 3600.00 3700.00 0.00000 0.00000 0.00000     1      0      10 /
- 3600.00 3610.00 3700.00 0.00000 0.00000 0.00000     1      0      10 /
+    3600.00 3610.00 3700.00 0.00000 0.00000 0.00000     1      0      10 /
 /
 --DATUM
 --  3600.000 /
 
 RPTSOL
 -- Solution output control
-   1   1   1   1   1   0   2   1   0   /
+    1   1   1   1   1   0   2   1   0   /
 
 SUMMARY
 
@@ -318,7 +313,7 @@ WCONINJE
 
 RPTSCHED
 -- Schedule output control
-   1   1   1   1   0   0   2   1   1   0   1   2   0   1   1   /
+    1   1   1   1   0   0   2   1   1   0   1   2   0   1   1   /
 
 TSTEP
 -- 15 intervals of 100 days

@@ -35,7 +35,7 @@ EQLDIMS
     1  100    2    1    2 /
 
 EQLOPTS
-'QUIESC'                          'MOBILE'   /
+    QUIESC  MOBILE  /
 
 TABDIMS
 -- Table dimensions

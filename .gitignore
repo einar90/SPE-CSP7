@@ -1,3 +1,4 @@
+# Eclipse output files
 *.SMSPEC
 *.UNSMRY
 *.PRT
@@ -10,4 +11,16 @@
 *.MSG
 *.RSSPEC
 *.UNRST
+
+# LaTeX output files
+*.log
+*.pdf
+*.aux
+*.fdb_latexmk
+*.fls
+*.synctex.gz
+
+# Sublime workspace
+*.sublime-workspace
+
 

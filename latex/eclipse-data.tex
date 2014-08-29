@@ -1,4 +1,5 @@
 \input{preambles/preamble.tex}
+\input{preambles/preamble-addon-figures.tex}
 
 \author{Einar Baumann}
 \title{Justification for eclipse input data}
@@ -14,8 +15,221 @@
 \section{Common for all cases} % (fold)
 \label{sec:common_for_all_cases}
 
+\begin{table}[H]
+  \centering
+  \caption{Reservoir data and initial conditions. The initial bubble point pressure is equal to the gridblock initial oil pressure. The permeabilities are for Cases 1-3. For Case 4 the horizontal and vertival permeabilities are 3000 and 300, respectively.}
+  \footnotesize
+  \label{tab:res_data_initial}
+  \begin{tabularx}{1.0\textwidth}{XXXXXXXX}
+    \toprule
+    Layer & $\Delta z$ {\tiny (ft)} & $\Delta z$ {\tiny (ft)} & $k_{h}$ {\tiny (md)} & $k_{v}$ {\tiny (md)} & $p_{oil}$ {\tiny (psia)} & $S_o$ & $S_w$ \\
+    \midrule
+    1 (top) & 20 & 3600 & 300 & 30 & 3600 & 0.711 & 0.289 \\
+    2       & 20 & 3620 & 300 & 30 & 3608 & 0.652 & 0.348 \\
+    3       & 20 & 3640 & 300 & 30 & 3616 & 0.527 & 0.473 \\
+    4       & 20 & 3660 & 300 & 30 & 3623 & 0.351 & 0.649 \\
+    5       & 30 & 3685 & 300 & 30 & 3633 & 0.131 & 0.869 \\
+    6 (btm) & 50 & 3725 & 300 & 30 & 3650 & 0.000 & 1.000 \\
+    \bottomrule
+  \end{tabularx}
+\end{table}
+
+\begin{figure}[htbp]
+  \centering
+  \includegraphics[]{figures/grid.pdf}
+  \caption{X and Y grid sizes.}
+  \label{fig:grid}
+\end{figure}
+
+
+\begin{table}[H]
+  \centering
+  \caption{Fluid property data -- saturated properties.}
+  \footnotesize
+  \label{tab:fluid_property_data}
+  \begin{tabularx}{1.0\textwidth}{XXXXXX}
+    \toprule
+    $P$ {\tiny (psia)} & $R_s$ {\tiny (SCF/STB)} & $B_o$ {\tiny (RB/STB)} & $B_g$ {\tiny (RB/SCF)} & $\mu_o$ {\tiny (cp)} & $\mu_g$ {\tiny (cp)} \\
+    \midrule
+     400 &  165 & 1.0120 & 0.00590 & 1.17 & 0.0130 \\
+     800 &  335 & 1.0255 & 0.00295 & 1.14 & 0.0135 \\
+    1200 &  500 & 1.0380 & 0.00196 & 1.11 & 0.0140 \\
+    1600 &  665 & 1.0510 & 0.00147 & 1.08 & 0.0145 \\
+    2000 &  828 & 1.0630 & 0.00118 & 1.06 & 0.0150 \\
+    2400 &  985 & 1.0750 & 0.00098 & 1.03 & 0.0155 \\
+    2800 & 1130 & 1.0870 & 0.00084 & 1.00 & 0.0150 \\
+    3200 & 1270 & 1.0985 & 0.00074 & 0.98 & 0.0165 \\
+    3600 & 1390 & 1.1100 & 0.00065 & 0.95 & 0.0170 \\
+    4000 & 1500 & 1.1200 & 0.00059 & 0.94 & 0.0175 \\
+    4400 & 1600 & 1.1300 & 0.00052 & 0.92 & 0.0180 \\
+    4800 & 1676 & 1.1400 & 0.00049 & 0.91 & 0.0185 \\
+    5200 & 1750 & 1.1480 & 0.00045 & 0.90 & 0.0190 \\
+    5600 & 1810 & 1.1550 & 0.00042 & 0.89 & 0.0195 \\
+    \bottomrule
+  \end{tabularx}
+\end{table}
+
+\begin{table}[H]
+  \centering
+  \caption{Additional fluid data}
+  \footnotesize
+  \label{tab:additional_fluid_data}
+  \begin{tabularx}{1.0\textwidth}{bsm}
+    \toprule
+    Propery  & Symbol  & Value \\
+    \midrule
+    Oil compressibility for undersaturated oil & $c_o$   & $10^{-5}$ $\mathrm{psia^{-1}}$ \\
+    Oil viscosity compressibility for undersaturated oil && $0$ $\mathrm{psia^{-1}}$ \\
+    Stock tank oil density & $\rho_{os}$ & $45.0$ $\mathrm{lb/ft^3}$ \\
+    Standard-condition gas density & $\rho_{gs}$ & $0.0702$ $\mathrm{lb/ft^3}$ \\
+    Water compressibility & $c_w$ & $3\times 10^{-6}$ $\mathrm{psia^{-1}}$ \\
+    Water formation volume factor at $T_{res}$ and $p_{atm}$ & $B_w^*$ & $1.0142$ $\mathrm{RB/STB}$ \\
+    Water density at standard conditions & $\rho_w^*$ & $62.14$ $\mathrm{lb/ft^3}$ \\
+    Reference pressure for water FVF and densities & $p_w^*$ & $14.7$ $\mathrm{psia}$ \\
+    Water viscosity & $\mu_w$ & $0.96$ $\mathrm{cp}$ \\
+    \bottomrule
+  \end{tabularx}
+\end{table}
+
+\begin{table}[H]
+  \centering
+  \caption{Property equations}
+  \footnotesize
+  \label{tab:property_equations}
+  \begin{tabularx}{1.0\textwidth}{mbsn}
+    \toprule
+    \textsc{Water FVF:}  & $B_w = B_w^*[1-c_w(p_w - p_w^*)]$                   & $\mathrm{RB/STB}$  & \\
+    \textsc{Densities:}  & $\rho_o = (\rho_{os} + R_s \rho_{gs} / 5.6146)/B_o$ & $\mathrm{lb/ft^3}$ & \\
+                         & $\rho_g = (\rho_{gs} / 5.6146)/B_g$                 & $\mathrm{lb/ft^3}$ & \\
+                         & $\rho_w = \rho_w^* [1 + c_w (p_w - p_w^*)]$         & $\mathrm{lb/ft^3}$ & \\
+    \textsc{Porosities:} & $\phi = \phi^* [1+c_\phi (p_o - p^*)]$              &                    & \\
+                         & $\phi^* = 0.20$                                     &                    & \\
+                         & $c_\phi = 4.0 \times 10^{-6}$                       & $\mathrm{psia^{-1}}$  & Rock compressibility \\
+                         & $p^* = 3600.0$                                      & $\mathrm{psia}$       & Reference pressure \\
+                         & $p_o$                                               &                       & Oil phase pressure \\
+    \bottomrule
+  \end{tabularx}
+\end{table}
 % section common_for_all_cases (end)
 
+\begin{table}[H]
+  \centering
+  \caption{Relative permeabilities and capillary pressures: Water/Oil functions.}
+  \footnotesize
+  \label{tab:rel_perm_capillary_wateroil}
+  \begin{tabularx}{.6\textwidth}{XXXX}
+    \toprule
+    $S_w$  & $k_{rw}$  & $k_{row}$ & $p_{cow}$ $\mathrm{psia}$ \\
+    \midrule
+    0.22 & 0.00 & 1.0000 & 6.30 \\
+    0.30 & 0.07 & 0.4000 & 3.60 \\
+    0.40 & 0.15 & 0.1250 & 2.70 \\
+    0.50 & 0.24 & 0.0649 & 2.25 \\
+    0.60 & 0.33 & 0.0048 & 1.80 \\
+    0.80 & 0.65 & 0.0000 & 0.90 \\
+    0.90 & 0.83 & 0.0000 & 0.45 \\
+    1.00 & 1.00 & 0.0000 & 0.00 \\
+    \bottomrule
+  \end{tabularx}
+\end{table}
+
+\begin{table}[H]
+  \centering
+  \caption{Relative permeabilities and capillary pressures: Gas/Oil functions.}
+  \footnotesize
+  \label{tab:rel_perm_capillary_gasoil}
+  \begin{tabularx}{.6\textwidth}{XXXX}
+    \toprule
+    $S_g$  & $k_{rg}$  & $k_{rog}$ & $p_{cgo}$ $\mathrm{psia}$ \\
+    \midrule
+    0.00 & 0.0000 & 1.00 & 0.0 \\
+    0.04 & 0.0000 & 0.60 & 0.2 \\
+    0.10 & 0.0220 & 0.33 & 0.5 \\
+    0.20 & 0.1000 & 0.10 & 1.0 \\
+    0.30 & 0.2400 & 0,02 & 1.5 \\
+    0.40 & 0.3400 & 0.00 & 2.0 \\
+    0.50 & 0.4200 & 0.00 & 2.5 \\
+    0.60 & 0.5000 & 0.00 & 3.0 \\
+    0.70 & 0.8125 & 0.00 & 3.5 \\
+    0.78 & 1.0000 & 0.00 & 3.9 \\
+    \bottomrule
+  \end{tabularx}
+\end{table}
+
+\begin{table}[H]
+  \centering
+  \caption{Injection well data.}
+  \footnotesize
+  \label{tab:inj_well_data}
+  \begin{tabularx}{.75\textwidth}{mbms}
+    \toprule
+    Cases 1, 2, 3 & Well index $I_{we}$ in each gridblock & $2.16 \times 10^4$ & $\mathrm{md.ft}$ \\
+                  & Bottom hole pressure                  & $3700$             & $\mathrm{psia}$ \\
+                  & Well rate in each gridblock           & $\frac{I_{we}}{B_w \mu_w}\Delta p$ & \\
+    Case 4        & Well index $I_{we}$ in each gridblock & $2.16 \times 10^5$ & $\mathrm{md.ft}$ \\
+                  & Water injection rate                  & $6000$             & $\mathrm{STB/day}$ \\
+    \bottomrule
+  \end{tabularx}
+\end{table}
+
+\begin{table}[H]
+  \centering
+  \caption{Production well data}
+  \label{tab:prod_well_data}
+  \begin{tabularx}{0.8\textwidth}{smmb}
+    \toprule
+    Case & $L$ $\mathrm{(ft)}$ & $q_l$ $(stb/day)$ & Water inj. scheme \\
+    \midrule
+    la & 900  & 3000 & $p = 3700$ psia      \\
+    Ib & 2100 & 3000 & $p = 3700$ psia      \\
+    2a & 900  & 6000 & $p = 3700$ psia      \\
+    2b & 2100 & 6000 & $p = 3700$ psia      \\
+    3a & 900  & 9000 & $p = 3700$ psia      \\
+    3b & 2100 & 9000 & $p = 3700$ psia      \\
+    4a & 900  & 9000 & $q_w = 6000$ stb/day  \\
+    4b & 2100 & 9000 & $q_w = 6000$ stb/day  \\
+    \bottomrule
+  \end{tabularx}
+\end{table}
+
+\subsection{Implementation} % (fold)
+\label{sub:implementation}
+The layer thickness and depth to center ($z$) in Table~\ref{tab:res_data_initial} and the grid sizes in Figure~\ref{fig:grid} are accounted for by.
+
+\footnotesize
+\begin{verbatim}
+DXV
+-- Vector of X-direction grid block sizes
+    9*300  /
+
+DYV
+-- Vector of Y-direction grid block sizes
+    620  400  200  100  60  100  200  400  620  /
+
+DZ
+-- Z-direction grid block sizes
+    81*20  81*20  81*20  81*20  81*30  81*50  /
+
+TOPS
+-- Depth of top face of topmost grid blocks
+    81*3590  /
+\end{verbatim}
+
+The permeabilities in Table~\ref{tab:res_data_initial}, as well as the porosity from Table~\ref{tab:property_equations}
+\[
+  \phi = \phi^* [1+c_\phi(p_o - p^*)] = 0.20 [1 + 4.0\times 10^{-6}()]
+\]
+
+\footnotesize
+\begin{verbatim}
+EQUALS
+    PORO    0.207  /
+    PERMX   300    /
+    PERMY   300    /
+    PERMZ   30     /
+/
+\end{verbatim}
+% subsection implementation (end)
 
 \section{Case 1 a)} % (fold)
 \label{sec:case_1_a}

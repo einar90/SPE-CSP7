@@ -1,0 +1,45 @@
+% -*- root: ../eclipse-data.tex -*-
+
+\begin{tikzpicture}
+  \draw[] (0,0) to (0,9) to (9,9) to (9,0) to (0,0);
+  \foreach \x in {1,2,...,9} {
+    \draw[] (\x,9) to (\x, 0);
+    \node[anchor=south] at ($ (\x,9) - (.5,0) $) {\x};
+  }
+
+  \draw[] (0,2) to (9,2);
+  \draw[] (0,7) to (9,7);
+
+  \draw[] (0,3.5) to (9,3.5);
+  \draw[] (0,5.5) to (9,5.5);
+
+  \draw[] (0,4) to (9,4);
+  \draw[] (0,5) to (9,5);
+
+  \draw[] (0,4.35) to (9,4.35);
+  \draw[] (0,4.65) to (9,4.65);
+
+  \node[anchor=east] at (0,1,00) {\footnotesize 9};
+  \node[anchor=east] at (0,2.75) {\footnotesize 8};
+  \node[anchor=east] at (0,3.75) {\footnotesize 7};
+  \node[anchor=east] at (0,4.15) {\footnotesize 6};
+  \node[anchor=east] at (0,4.50) {\footnotesize 5};
+  \node[anchor=east] at (0,4.85) {\footnotesize 4};
+  \node[anchor=east] at (0,5.25) {\footnotesize 3};
+  \node[anchor=east] at (0,6.25) {\footnotesize 2};
+  \node[anchor=east] at (0,8.00) {\footnotesize 1};
+
+  \node[anchor=west] at (9,1,00) {\footnotesize 620 ft};
+  \node[anchor=west] at (9,2.75) {\footnotesize 400 ft};
+  \node[anchor=west] at (9,3.75) {\footnotesize 200 ft};
+  \node[anchor=west] at (9,4.15) {\footnotesize 100 ft};
+  \node[anchor=west] at (9,4.50) {\footnotesize 60  ft};
+  \node[anchor=west] at (9,4.85) {\footnotesize 100 ft};
+  \node[anchor=west] at (9,5.25) {\footnotesize 200 ft};
+  \node[anchor=west] at (9,6.25) {\footnotesize 400 ft};
+  \node[anchor=west] at (9,8.00) {\footnotesize 620 ft};
+
+  \node[anchor=south west] at (9,9) {\footnotesize $\Delta y$};
+  \node[anchor=north] at (4.5,0) {\footnotesize $\Delta x = 300 \mathrm{ft} = \mathrm{constant}$};
+
+\end{tikzpicture}

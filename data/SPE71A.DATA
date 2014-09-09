@@ -215,12 +215,12 @@ RPTPROPS
 SOLUTION
 
 RSVD
---  R_s vs. depth
+--  depth   R_s
     3600.0  1.3900
-    3700.0  1.39
+    3700.0  1.3900
 /
 PBVD
---  P_bp vs. depth
+--  depth   P_bp
     3600.0   3600
     3700.0   3600
 /
@@ -247,13 +247,20 @@ RPTSOL
 
 SUMMARY
 
+
 FOPR
 FWCT
 FGOR
-
---SOIL
 FOE
 FOPT
+
+WOPR
+WOPT
+WWCT
+WWPT
+WWPR
+WGPR
+WGPT
 
 SCHEDULE
 

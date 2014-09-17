@@ -33,6 +33,8 @@
 --  The results for cases a) and b) are identical, whilst case c) gives
 --  slightly different results.
 --
+-- Source: 
+-- http://www.ipt.ntnu.no/~kleppe/pub/SPE-COMPARATIVE/ECLIPSE_DATA/SPE7-9x9x6.DATA
 RUNSPEC
 TITLE
 HORIZONTAL WELL MODEL

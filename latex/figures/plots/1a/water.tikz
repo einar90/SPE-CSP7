@@ -1,0 +1,12 @@
+% -*- root: ../../../plots.tex -*-
+
+\begin{tikzpicture}[font = \sffamily]
+    \begin{axis}[
+        xlabel={Time},
+        ylabel={WOR (stb/stb)},
+        ymin=0,
+        xmin=0, xmax=1500,
+        ]
+        \addplot[color=red, mark=o] table[x=TIME, y=WWOR:1A, col sep=comma, skip coords between index={0}{1}]{data/1a.csv};
+    \end{axis}
+\end{tikzpicture}

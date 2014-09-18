@@ -152,7 +152,7 @@ PVTW
 DENSITY
 -- Fluid densities at surface conditions
 --  Oil    Water  Gas
-    49.1   64.79  0.06054  /
+    45.0   62.14  0.0702  /
 
 ROCK
 -- Rock compressibility

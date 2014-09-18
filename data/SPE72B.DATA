@@ -5,7 +5,7 @@
 
 RUNSPEC
 TITLE
-CASE 1A
+CASE 1B
 
 DIMENS
 --  X  Y  Z
@@ -294,6 +294,10 @@ WELSPECS
 
 COMPDAT
 --  Name  I  J  K1 K2           DIAM    Effective Kh Dir. of penetr.
+    PROD  2  5  1  1  OPEN  2*  0.3750  3*           X /
+    PROD  3  5  1  1  OPEN  2*  0.3750  3*           X /
+    PROD  4  5  1  1  OPEN  2*  0.3750  3*           X /
+    PROD  5  5  1  1  OPEN  2*  0.3750  3*           X /
     PROD  6  5  1  1  OPEN  2*  0.3750  3*           X /
     PROD  7  5  1  1  OPEN  2*  0.3750  3*           X /
     PROD  8  5  1  1  OPEN  2*  0.3750  3*           X /
@@ -310,8 +314,8 @@ COMPDAT
 /
 
 WCONPROD
--- Production well; Controlled by RESV fluid volume rate target=3000; BHP lower limit = 1500
-    PROD  OPEN  RESV  4*  3000.00000  1500.000    3*  /
+-- Production well; Controlled by RESV fluid volume rate target=6000; BHP lower limit = 1500
+    PROD  OPEN  RESV  4*  6000.00000  1500.000    3*  /
 /
 
 WCONINJE

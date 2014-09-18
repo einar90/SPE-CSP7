@@ -5,7 +5,7 @@
 
 RUNSPEC
 TITLE
-CASE 1A
+CASE 2A
 
 DIMENS
 --  X  Y  Z
@@ -310,8 +310,8 @@ COMPDAT
 /
 
 WCONPROD
--- Production well; Controlled by RESV fluid volume rate target=3000; BHP lower limit = 1500
-    PROD  OPEN  RESV  4*  3000.00000  1500.000    3*  /
+-- Production well; Controlled by RESV fluid volume rate target=6000; BHP lower limit = 1500
+    PROD  OPEN  RESV  4*  6000.00000  1500.000    3*  /
 /
 
 WCONINJE

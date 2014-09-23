@@ -1,0 +1,23 @@
+NONNC
+
+OIL
+
+WATER
+
+GAS
+
+DISGAS
+
+FIELD
+
+EQLOPTS
+    QUIESC  MOBILE  /
+
+START
+    1  JAN  1990  /
+
+NSTACK
+    25  /
+
+UNIFOUT
+UNIFIN

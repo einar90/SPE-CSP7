@@ -1,0 +1,45 @@
+WOPR
+   PROD1
+   PROD2
+/
+WBHP
+   PROD1
+   PROD2
+/
+WOPT
+   PROD1
+   PROD2
+/
+WWCT
+   PROD1
+   PROD2
+/
+WWPT
+   PROD1
+   PROD2
+/
+WWPR
+   PROD1
+   PROD2
+/
+WGPR
+   PROD1
+   PROD2
+/
+WGPT
+   PROD1
+   PROD2
+/
+
+FOPR
+FWCT
+FGOR
+FWPR
+FWPT
+
+FGPR
+FGPT
+
+--SOIL
+FOE
+FOPT

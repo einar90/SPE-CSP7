@@ -3,7 +3,7 @@
 --                     **************************
 --
 
-RUNSPEC
+RUNSPEC ==================================================================
 TITLE
 CASE 1A
 
@@ -64,47 +64,21 @@ NSTACK
 UNIFOUT
 UNIFIN
 
---OPTIONS
---    16*0   1   /
-
-
-
-
-GRID
+GRID =====================================================================
 NOECHO
 
 GRIDFILE
     2  /
 
-DXV
--- Vector of X-direction grid block sizes
-    9*300  /
-
-DYV
--- Vector of Y-direction grid block sizes
-    620  400  200  100  60  100  200  400  620  /
-
-DZ
--- Z-direction grid block sizes
-    81*20  81*20  81*20  81*20  81*30  81*50  /
-
-TOPS
--- Depth of top face of topmost grid blocks
-    81*3590  /
-
-EQUALS
-    PORO    0.207  /
-    PERMX   300    /
-    PERMY   300    /
-    PERMZ   30     /
-/
+INCLUDE
+   ORIG.GRIDSPEC /
 
 INIT
 
 RPTGRID
     AQUCON  /
 
-PROPS
+PROPS ====================================================================
 
 PVDG
 -- PVT Properties of dry gas
@@ -212,7 +186,7 @@ RPTPROPS
     SDENSITY  BDENSITY  PCG  PCW  ENDPT  KRG  KRGR
     SGCR  SWCR SWL SWU TRACER /
 
-SOLUTION
+SOLUTION =================================================================
 
 RSVD
 --  depth   R_s
@@ -245,7 +219,7 @@ EQUIL
 RPTSOL
     RESTART=2 POIL SOIL SWAT SGAS FIP=1 /
 
-SUMMARY
+SUMMARY ==================================================================
 
 WOPR
    PROD /
@@ -277,7 +251,7 @@ FGPT
 FOE
 FOPT
 
-SCHEDULE
+SCHEDULE =================================================================
 
 --DRSDT
 --   1.000E+20 /
@@ -328,4 +302,4 @@ TSTEP
     15*100
 /
 
-END
+END ======================================================================

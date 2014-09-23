@@ -3,7 +3,7 @@
 --                     **************************
 --
 
-RUNSPEC ==================================================================
+RUNSPEC
 TITLE
 CASE 1A
 
@@ -23,18 +23,6 @@ DISGAS
 
 FIELD
 
-EQLOPTS
-    QUIESC  MOBILE  /
-
-START
-    1  JAN  1990  /
-
-NSTACK
-    25  /
-
-UNIFOUT
-UNIFIN
-
 EQLDIMS
 -- Dimensions of equilibriation tables
 --  1: Number of equilibriation regions entered using EQLNUM  = 1
@@ -45,6 +33,9 @@ EQLDIMS
 --  4: Max number of TVDP tables (init. tracer concentration) = 1
 --  5: Max number of depth nodes in any TVDP table.
     1  100  2  1  2  /
+
+EQLOPTS
+    QUIESC  MOBILE  /
 
 TABDIMS
 -- Table dimensions
@@ -64,8 +55,22 @@ WELLDIMS
 --  4: Max number of wells in each group  = 2
     2  16  1  2 /
 
+START
+    1  JAN  1990  /
 
-GRID =====================================================================
+NSTACK
+    25  /
+
+UNIFOUT
+UNIFIN
+
+--OPTIONS
+--    16*0   1   /
+
+
+
+
+GRID
 NOECHO
 
 GRIDFILE
@@ -99,7 +104,7 @@ INIT
 RPTGRID
     AQUCON  /
 
-PROPS ====================================================================
+PROPS
 
 PVDG
 -- PVT Properties of dry gas
@@ -207,7 +212,7 @@ RPTPROPS
     SDENSITY  BDENSITY  PCG  PCW  ENDPT  KRG  KRGR
     SGCR  SWCR SWL SWU TRACER /
 
-SOLUTION =================================================================
+SOLUTION
 
 RSVD
 --  depth   R_s
@@ -240,7 +245,7 @@ EQUIL
 RPTSOL
     RESTART=2 POIL SOIL SWAT SGAS FIP=1 /
 
-SUMMARY ==================================================================
+SUMMARY
 
 WOPR
    PROD /
@@ -272,7 +277,7 @@ FGPT
 FOE
 FOPT
 
-SCHEDULE =================================================================
+SCHEDULE
 
 --DRSDT
 --   1.000E+20 /
@@ -323,4 +328,4 @@ TSTEP
     15*100
 /
 
-END ======================================================================
+END

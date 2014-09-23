@@ -3,7 +3,7 @@
 --                     **************************
 --
 
-RUNSPEC
+RUNSPEC ==================================================================
 TITLE
 CASE 1A
 
@@ -99,16 +99,16 @@ SUMMARY ==================================================================
 INCLUDE
    'includes/MOD.SMRY' /
 
-SCHEDULE
+SCHEDULE =================================================================
 
 INCLUDE
-   'includes/MODLONG.WELSPECS' /
+   'includes/MODSHORT.WELSPECS' /
 
 INCLUDE
-   'includes/MODLONG.COMPDAT' /
+   'includes/MODSHORT.COMPDAT' /
 
 INCLUDE 
-   'includes/MODCASE2.WCON' /
+   'includes/MODCASE3.WCON' /
 
 RPTSCHED
    PRESSURE  SOIL  SWAT  SGAS  RESTART=2  FIP=1

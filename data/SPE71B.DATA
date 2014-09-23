@@ -3,7 +3,7 @@
 --                     **************************
 --
 
-RUNSPEC
+RUNSPEC ==================================================================
 TITLE
 CASE 1B
 
@@ -64,7 +64,7 @@ NSTACK
 UNIFOUT
 UNIFIN
 
-GRID
+GRID    ==================================================================
 NOECHO
 
 GRIDFILE
@@ -78,7 +78,7 @@ INIT
 RPTGRID
     AQUCON  /
 
-PROPS
+PROPS   ==================================================================
 
 INCLUDE
    'includes/COMMON.PVT' /
@@ -89,17 +89,17 @@ RPTPROPS
     SDENSITY  BDENSITY  PCG  PCW  ENDPT  KRG  KRGR
     SGCR  SWCR SWL SWU TRACER /
 
-SOLUTION
+SOLUTION =================================================================
 
 INCLUDE
    'includes/COMMON.SOLN' /
 
-SUMMARY
+SUMMARY ==================================================================
 
 INCLUDE
    'includes/ORIG.SMRY' /
 
-SCHEDULE
+SCHEDULE =================================================================
 
 INCLUDE
    'includes/ORIGLONG.WELSPECS' /
@@ -119,4 +119,4 @@ TSTEP
     15*100
 /
 
-END
+END     ==================================================================

@@ -71,7 +71,7 @@ GRIDFILE
     2  /
 
 INCLUDE
-   ORIG.GRIDSPEC /
+   includes/ORIG.GRIDSPEC /
 
 INIT
 

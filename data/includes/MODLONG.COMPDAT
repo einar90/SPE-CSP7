@@ -1,0 +1,28 @@
+COMPDAT
+--  Name  I  J  K1 K2           DIAM    Effective Kh Dir. of penetr.
+    PROD1 2  5  1  1  OPEN  2*  0.3750  3*           X /
+    PROD1 3  5  1  1  OPEN  2*  0.3750  3*           X /
+    PROD1 4  5  1  1  OPEN  2*  0.3750  3*           X /
+    PROD1 5  5  1  1  OPEN  2*  0.3750  3*           X /
+    PROD1 6  5  1  1  OPEN  2*  0.3750  3*           X /
+    PROD1 7  5  1  1  OPEN  2*  0.3750  3*           X /
+    PROD1 8  5  1  1  OPEN  2*  0.3750  3*           X /
+
+    PROD2 2  40 1  1  OPEN  2*  0.3750  3*           X /
+    PROD2 3  40 1  1  OPEN  2*  0.3750  3*           X /
+    PROD2 4  40 1  1  OPEN  2*  0.3750  3*           X /
+    PROD2 5  40 1  1  OPEN  2*  0.3750  3*           X /
+    PROD2 6  40 1  1  OPEN  2*  0.3750  3*           X /
+    PROD2 7  40 1  1  OPEN  2*  0.3750  3*           X /
+    PROD2 8  40 1  1  OPEN  2*  0.3750  3*           X /
+
+    INJ   1  23 6  6  OPEN  2*  0.3750  2.16E04  2*  X /
+    INJ   2  23 6  6  OPEN  2*  0.3750  2.16E04  2*  X /
+    INJ   3  23 6  6  OPEN  2*  0.3750  2.16E04  2*  X /
+    INJ   4  23 6  6  OPEN  2*  0.3750  2.16E04  2*  X /
+    INJ   5  23 6  6  OPEN  2*  0.3750  2.16E04  2*  X /
+    INJ   6  23 6  6  OPEN  2*  0.3750  2.16E04  2*  X /
+    INJ   7  23 6  6  OPEN  2*  0.3750  2.16E04  2*  X /
+    INJ   8  23 6  6  OPEN  2*  0.3750  2.16E04  2*  X /
+    INJ   9  23 6  6  OPEN  2*  0.3750  2.16E04  2*  X /
+/

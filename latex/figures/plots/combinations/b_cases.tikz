@@ -10,10 +10,10 @@
         xlabel near ticks,
         ylabel near ticks
         ]
-        \addplot[color=red,   mark=o] table[x=TIME, y=WOPR:1B, col sep=comma, skip coords between index={0}{1}]{data/1b.csv};
-        \addplot[color=blue,  mark=o] table[x=TIME, y=WOPR:2B, col sep=comma, skip coords between index={0}{1}]{data/2b.csv};
-        \addplot[color=brown, mark=o] table[x=TIME, y=WOPR:3B, col sep=comma, skip coords between index={0}{1}]{data/3b.csv};
-        \addplot[color=green, mark=o] table[x=TIME, y=WOPR:4B, col sep=comma, skip coords between index={0}{1}]{data/4b.csv};
+        \addplot[color=red,   mark=o] table[x=TIME, y=WOPR:PROD, col sep=comma, skip coords between index={0}{1}]{data/spe71b.csv};
+        \addplot[color=blue,  mark=o] table[x=TIME, y=WOPR:PROD, col sep=comma, skip coords between index={0}{1}]{data/spe72b.csv};
+        \addplot[color=brown, mark=o] table[x=TIME, y=WOPR:PROD, col sep=comma, skip coords between index={0}{1}]{data/spe73b.csv};
+        \addplot[color=green, mark=o] table[x=TIME, y=WOPR:PROD, col sep=comma, skip coords between index={0}{1}]{data/spe74b.csv};
     \end{axis}
     \begin{axis}[
         ylabel={Cumulative Oil (stb)},
@@ -28,9 +28,9 @@
         \addlegendimage{mark=none, blue}
         \addlegendimage{mark=none, brown}
         \addlegendimage{mark=none, green}
-        \addplot[color=red,   mark=x] table[x=TIME, y=WOPT:1B, col sep=comma, skip coords between index={0}{1}]{data/1b.csv};
-        \addplot[color=blue,  mark=x] table[x=TIME, y=WOPT:2B, col sep=comma, skip coords between index={0}{1}]{data/2b.csv};
-        \addplot[color=brown, mark=x] table[x=TIME, y=WOPT:3B, col sep=comma, skip coords between index={0}{1}]{data/3b.csv};
-        \addplot[color=green, mark=x] table[x=TIME, y=WOPT:4B, col sep=comma, skip coords between index={0}{1}]{data/4b.csv};
+        \addplot[color=red,   mark=x] table[x=TIME, y=WOPT:PROD, col sep=comma, skip coords between index={0}{1}]{data/spe71b.csv};
+        \addplot[color=blue,  mark=x] table[x=TIME, y=WOPT:PROD, col sep=comma, skip coords between index={0}{1}]{data/spe72b.csv};
+        \addplot[color=brown, mark=x] table[x=TIME, y=WOPT:PROD, col sep=comma, skip coords between index={0}{1}]{data/spe73b.csv};
+        \addplot[color=green, mark=x] table[x=TIME, y=WOPT:PROD, col sep=comma, skip coords between index={0}{1}]{data/spe74b.csv};
       \end{axis}
 \end{tikzpicture}

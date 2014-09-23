@@ -6,7 +6,11 @@
         ylabel={WOR (stb/stb)},
         ymin=0,
         xmin=0, xmax=1500,
-        ]
-        \addplot[color=red, mark=o] table[x=TIME, y=WWOR:1A, col sep=comma, skip coords between index={0}{1}]{data/1a.csv};
+        ]        
+        \addplot[color=red, mark=o] table[	x=TIME, 
+        									y expr={\thisrow{WWPR:PROD} / \thisrow{WOPR:PROD}}, 
+        									col sep=comma, 
+        									skip coords between index={0}{1}]
+        								{data/spe71a.csv};
     \end{axis}
 \end{tikzpicture}

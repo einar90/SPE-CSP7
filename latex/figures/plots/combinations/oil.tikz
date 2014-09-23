@@ -14,6 +14,10 @@
         \addplot[color=blue,  mark=o] table[x=TIME, y=WOPR:PROD, col sep=comma, skip coords between index={0}{1}]{data/spe72a.csv};
         \addplot[color=brown, mark=o] table[x=TIME, y=WOPR:PROD, col sep=comma, skip coords between index={0}{1}]{data/spe73a.csv};
         \addplot[color=green, mark=o] table[x=TIME, y=WOPR:PROD, col sep=comma, skip coords between index={0}{1}]{data/spe74a.csv};
+        \addplot[color=red,   mark=x] table[x=TIME, y=WOPR:PROD, col sep=comma, skip coords between index={0}{1}]{data/spe71b.csv};
+        \addplot[color=blue,  mark=x] table[x=TIME, y=WOPR:PROD, col sep=comma, skip coords between index={0}{1}]{data/spe72b.csv};
+        \addplot[color=brown, mark=x] table[x=TIME, y=WOPR:PROD, col sep=comma, skip coords between index={0}{1}]{data/spe73b.csv};
+        \addplot[color=green, mark=x] table[x=TIME, y=WOPR:PROD, col sep=comma, skip coords between index={0}{1}]{data/spe74b.csv};
     \end{axis}
     \begin{axis}[
         ylabel={Cumulative Oil (stb)},

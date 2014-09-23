@@ -1,0 +1,5 @@
+WELSPECS
+-- Name  Grp I  J  RefDepth Phase     AutoShutin 
+   PROD  G1  2  5  3600.00  OIL   2*  STOP   /
+   INJ   G1  1  5  3725.00  WATER 2*  STOP   /
+/

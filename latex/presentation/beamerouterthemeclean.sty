@@ -1,0 +1,57 @@
+\usepackage{tikz}
+
+% Frametitle area, frontpage title area
+\setbeamertemplate{frametitle}
+{
+	\nointerlineskip
+    \begin{beamercolorbox}[sep=0.3cm,ht=1.8em,wd=\paperwidth]{frametitle}
+        \vbox{}\vskip-2ex%  Make it fill top edge of page
+        \strut\insertframetitle\strut % Ensure quaranteed height with strut
+        \vskip-0.8ex% Center text
+    \end{beamercolorbox}
+}
+
+% Remark environment
+\newsavebox\remarkbox
+\newenvironment{remark}{%
+  \begin{lrbox}{\remarkbox}%
+    \begin{minipage}{.9\textwidth}
+    \textbf{Remark:}
+}{
+    \end{minipage}
+  \end{lrbox}
+  \tikz\node[
+    fill=white,
+    draw=greyone,
+    line width=3pt,
+    inner sep=7.5pt,
+    outer sep=0pt,
+  ]{\usebox\remarkbox};
+}
+
+% Code environment
+\newsavebox\codebox
+\newenvironment{code}{%
+  \begin{lrbox}{\codebox}%
+    \begin{minipage}{.9\textwidth}
+}{
+    \vspace{-2em}
+    \end{minipage}
+  \end{lrbox}
+  \tikz\node[
+    color=white,
+    fill=greyone,
+    inner sep=7.5pt,
+    rounded corners,
+    outer sep=0pt,
+  ]{\usebox\codebox};
+}
+
+% Itemizations and enumerations
+\setbeamertemplate{itemize item}{\scriptsize\raise1.25pt\hbox{\donotcoloroutermaths$\blacktriangleright$}}
+\setbeamertemplate{itemize subitem}{\tiny\raise1.5pt\hbox{\donotcoloroutermaths$\blacktriangleright$}}
+\setbeamertemplate{itemize subsubitem}{\tiny\raise1.5pt\hbox{\donotcoloroutermaths$\blacktriangleright$}}
+\setbeamertemplate{enumerate item}{\insertenumlabel.}
+\setbeamertemplate{enumerate subitem}{\insertenumlabel.\insertsubenumlabel}
+\setbeamertemplate{enumerate subsubitem}{\insertenumlabel.\insertsubenumlabel.\insertsubsubenumlabel}
+\setbeamertemplate{enumerate mini template}{\insertenumlabel}

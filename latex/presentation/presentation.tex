@@ -14,10 +14,52 @@
 \begin{document}
  
 \frame{\titlepage}
+
+\begin{frame}
+    \frametitle{Table of Contents}
+    \tableofcontents
+\end{frame}
  
-\section{First section}
-\subsection{First subsection}
-\subsection{Second subsection}
+\section{Purpose}
+\begin{frame}
+    \frametitle{Purpose}
+    \begin{itemize}
+        \item The purpose of SPE CSP7 study was to compare the results of simulations performed by different organizations, using different simulators.
+        \item The purpose of this project was to recreate the results of the SPE CSP7 study; specifically the ECL100 results.
+        \item Additionally, modifications were made to the model and the results compared to that of the original model.
+    \end{itemize}
+\end{frame}
+
+\section{Original model}
+\begin{frame}
+    \frametitle{Original model}
+\end{frame}
+
+\subsection{Grid}
+\begin{frame}
+    \frametitle{Original model: Grid}
+
+\end{frame}
+
+\begin{frame}
+    \frametitle{Original model: Grid}
+    \begin{columns}[c]
+        \column{0.7\textwidth}
+            \includegraphics[width=\textwidth]{../figures/grid.pdf}
+        \column{0.45\textwidth}
+            \begin{itemize}
+                \item $9\times 9 \times 6$ blocks.
+                \item Constant $\Delta x = 300 ft$.
+                \item Variable $\Delta y$ and $\Delta z$. 
+                \item Smaller blocks around the producing well.
+            \end{itemize}
+    \end{columns}
+\end{frame}
+
+\subsection{Wells}
+\begin{frame}
+    \frametitle{Original model: Wells}
+\end{frame}
 
 \begin{frame}[fragile]
 	\frametitle{Sample frame title}
@@ -33,71 +75,16 @@ is it indented?
     \end{code}
 \end{frame}
 
- \section{Second section}
-\begin{frame}
-\frametitle{Table of Contents}
-\tableofcontents
-\end{frame}
-
-\begin{frame}
-\frametitle{Sample frame title}
-This is a text in second frame. 
-For the sake of showing an example.
- 
-\begin{itemize}
- % \item<1-> Text visible on slide 1
- % \item<2-> Text visible on slide 2
- % \item<3> Text visible on slide 3
- % \item<4-> Text visible on slide 4
-  \item Item
-  \begin{itemize}
-      \item Subitem
-      \begin{itemize}
-          \item Subsubitem
-      \end{itemize}
-  \end{itemize}
-\end{itemize}
-
-\begin{enumerate}
-    \item Enum
-    \begin{enumerate}
-        \item Subenum
-        \begin{enumerate}
-            \item Subsubenum
-        \end{enumerate}
-    \end{enumerate}
-\end{enumerate}
-
-\end{frame}
-
-{
 \begin{frame}
  In this slide \pause
  
- the text will be partially visible \pause
- 
- And finally everything will be there
+ the text will be partially visible
 \end{frame}
-}
 
 
 \begin{frame}
-	\frametitle{Sample frame title}
-	 
-	In this slide, some important text will be
-	\alert{highlighted} beause it's important.
-	Please, don't abuse it.
-	 
-	\begin{block}{Remark}
-		Sample text
-	\end{block}
-	 
-	\begin{alertblock}{Important theorem}
-		Sample text in red box
-	\end{alertblock}
-	 
 	\begin{remark}
-		Sample text in green box. "Examples" is fixed as block title.
+		Sample text in green box. ``Examples'' is fixed as block title.
 	\end{remark}
 \end{frame}
  

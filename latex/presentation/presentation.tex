@@ -1,0 +1,104 @@
+% -*- program: xelatex -*-
+
+\documentclass{beamer}
+\usepackage[utf8]{inputenc}
+\usepackage{verbatim}
+
+\useoutertheme{clean}
+\usecolortheme{clean}
+\usefonttheme{clean}
+\input{about.tex}
+ 
+ 
+ 
+\begin{document}
+ 
+\frame{\titlepage}
+ 
+\section{First section}
+\subsection{First subsection}
+\subsection{Second subsection}
+
+\begin{frame}[fragile]
+	\frametitle{Sample frame title}
+	\begin{code}
+        \begin{verbatim}
+        this is code
+is it indented?
+ nope...
+this is code
+is it indented?
+ nope...
+        \end{verbatim}
+    \end{code}
+\end{frame}
+
+ \section{Second section}
+\begin{frame}
+\frametitle{Table of Contents}
+\tableofcontents
+\end{frame}
+
+\begin{frame}
+\frametitle{Sample frame title}
+This is a text in second frame. 
+For the sake of showing an example.
+ 
+\begin{itemize}
+ % \item<1-> Text visible on slide 1
+ % \item<2-> Text visible on slide 2
+ % \item<3> Text visible on slide 3
+ % \item<4-> Text visible on slide 4
+  \item Item
+  \begin{itemize}
+      \item Subitem
+      \begin{itemize}
+          \item Subsubitem
+      \end{itemize}
+  \end{itemize}
+\end{itemize}
+
+\begin{enumerate}
+    \item Enum
+    \begin{enumerate}
+        \item Subenum
+        \begin{enumerate}
+            \item Subsubenum
+        \end{enumerate}
+    \end{enumerate}
+\end{enumerate}
+
+\end{frame}
+
+{
+\begin{frame}
+ In this slide \pause
+ 
+ the text will be partially visible \pause
+ 
+ And finally everything will be there
+\end{frame}
+}
+
+
+\begin{frame}
+	\frametitle{Sample frame title}
+	 
+	In this slide, some important text will be
+	\alert{highlighted} beause it's important.
+	Please, don't abuse it.
+	 
+	\begin{block}{Remark}
+		Sample text
+	\end{block}
+	 
+	\begin{alertblock}{Important theorem}
+		Sample text in red box
+	\end{alertblock}
+	 
+	\begin{remark}
+		Sample text in green box. "Examples" is fixed as block title.
+	\end{remark}
+\end{frame}
+ 
+\end{document}

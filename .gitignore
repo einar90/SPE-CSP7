@@ -26,3 +26,10 @@
 # Sublime workspace
 *.sublime-workspace
 *.ptex
+
+# Beamer aux files
+*.nav
+*.out
+*.snm
+*.toc
+*.vrb

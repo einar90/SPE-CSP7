@@ -1,6 +1,6 @@
 WCONPROD
 -- Production well; Controlled by RESV fluid volume rate target=9000; BHP lower limit = 1500
-    PROD  OPEN  RESV  4*  9000.00000  1500.000    3*  /
+    PROD  OPEN  RESV  4*  15000.00000  1500.000    3*  /
 /
 
 WCONINJE

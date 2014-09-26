@@ -103,7 +103,7 @@ INCLUDE
 SUMMARY ==================================================================
 
 INCLUDE
-   'includes/ORIG.SMRY' /
+   'includes/COMMON.SMRY' /
 
 SCHEDULE =================================================================
 
@@ -121,7 +121,7 @@ INCLUDE
    'includes/ORIGLONG.COMPDAT' /
 
 INCLUDE 
-   'includes/ORIGCASE2.WCON' /
+   'includes/CASE2.WCON' /
 
 RPTSCHED
    PRESSURE  SOIL  SWAT  SGAS  RESTART=2  FIP=1

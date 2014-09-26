@@ -1,6 +1,6 @@
 DXV
 -- Vector of X-direction grid block sizes
-    9*300  /
+    45*60  /
 
 DYV
 -- Vector of Y-direction grid block sizes
@@ -8,11 +8,11 @@ DYV
 
 DZ
 -- Z-direction grid block sizes
-    405*20  405*20  405*20  405*20  405*30  405*50  /
+    2025*20  2025*20  2025*20  2025*20  2025*20  2025*20  /
 
 TOPS
 -- Depth of top face of topmost grid blocks
-    405*3590  /
+    2025*3590  /
 
 EQUALS
     PORO    0.207  /

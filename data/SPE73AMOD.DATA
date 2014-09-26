@@ -9,7 +9,7 @@ CASE 1A
 
 DIMENS
 --  X  Y  Z
-    9  45 6  /
+    45  45 8  /
 
 NONNC
 
@@ -97,7 +97,7 @@ INCLUDE
 SUMMARY ==================================================================
 
 INCLUDE
-   'includes/MOD.SMRY' /
+   'includes/COMMON.SMRY' /
 
 SCHEDULE =================================================================
 
@@ -108,7 +108,7 @@ INCLUDE
    'includes/MODSHORT.COMPDAT' /
 
 INCLUDE 
-   'includes/MODCASE3.WCON' /
+   'includes/CASE3.WCON' /
 
 RPTSCHED
    PRESSURE  SOIL  SWAT  SGAS  RESTART=2  FIP=1

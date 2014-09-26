@@ -71,7 +71,7 @@ GRIDFILE
     2  /
 
 INCLUDE
-   'includes/MOD.GRIDSPEC' /
+   'includes/MOD4.GRIDSPEC' /
 
 INIT
 

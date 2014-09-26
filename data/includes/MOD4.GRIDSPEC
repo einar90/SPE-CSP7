@@ -8,7 +8,7 @@ DYV
 
 DZ
 -- Z-direction grid block sizes
-    2025*20  2025*20  2025*20  2025*20  2025*20  2025*20  /
+    2025*20  2025*20  2025*20  2025*20  2025*20 2025*20 2025*20 2025*20  /
 
 TOPS
 -- Depth of top face of topmost grid blocks

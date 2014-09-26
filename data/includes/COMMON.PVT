@@ -19,6 +19,7 @@ PVDG
 
 PVTO
 -- PVT Properties of live oil (with dissolved gas)
+-- Final values are from ECL manual, PVTO section.
 --  R_s    P_bp  B_o     mu_o
     0.165  400   1.0120  1.17 /
     0.335  800   1.0255  1.14 /
@@ -31,9 +32,9 @@ PVTO
     1.390  3600  1.1100  0.95 /
     1.500  4000  1.1200  0.94 /  
     1.600  4400  1.1300  0.92 
-           4800  1.1400  0.91 
-           5200  1.1480  0.90 
-           5600  1.1550  0.89 /
+           4800  1.1255  0.92 
+           5200  1.1210  0.92 
+           5600  1.1165  0.92 /
 /
  
 PVTW

@@ -4,7 +4,7 @@
 --    3700.0  1.3900
 --/
 
-EQUIL
+--EQUIL
 -- Equilibriation data specifiaction
 --  1: Datum depth
 --  2: Pressure at datum depth
@@ -17,10 +17,10 @@ EQUIL
 --  8: Initialization type for black oil with wet gas. Zero -> R_v = R_v@GOC
 --  9: Accuracy of initial fluids in place calculation.
 -- 3600.00 3600.00 3700.00 0.00000 0.00000 0.00000     1      0      10 /
-    3600.00 3610.00 3700.00 0.00000 0.00000 0.00000     1      0      10 /
-/
---DATUM
---  3600.000 /
+--    3600.00 3610.00 3700.00 0.00000 0.00000 0.00000     1      0      10 /
+--/
+DATUM
+  3600.000 /
 
 PBUB
 -- Initial bubble point pressures in blocks 

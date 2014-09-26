@@ -61,6 +61,9 @@ START
 NSTACK
     25  /
 
+FRICTION
+   1  1 /
+
 UNIFOUT
 UNIFIN
 
@@ -106,6 +109,9 @@ INCLUDE
 
 INCLUDE
    'includes/ORIGSHORT.COMPDAT' /
+
+INCLUDE
+   'includes/ORIGSHORT.WFRICTN' /
 
 INCLUDE 
    'includes/CASE4.WCON' /

@@ -102,7 +102,7 @@ INCLUDE
 SCHEDULE =================================================================
 
 INCLUDE
-   'includes/ORIGLONG.WELLS' /
+   'includes/ORIGLONG4.WELLS' /
 
 INCLUDE 
    'includes/CASE4.WCON' /

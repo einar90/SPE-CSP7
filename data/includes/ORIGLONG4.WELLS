@@ -1,0 +1,26 @@
+WELSPECS
+-- Name  Grp I  J  RefDepth Phase     AutoShutin 
+   PROD  G1  2  5  3600.00  OIL   2*  STOP   /
+   INJ   G1  1  5  3725.00  WATER 2*  STOP   /
+/
+
+COMPDAT
+--  Name  I  J  K1 K2           DIAM    Effective Kh Dir. of penetr.
+    PROD  2  5  1  1  OPEN  2*  0.3750  3*           X /
+    PROD  3  5  1  1  OPEN  2*  0.3750  3*           X /
+    PROD  4  5  1  1  OPEN  2*  0.3750  3*           X /
+    PROD  5  5  1  1  OPEN  2*  0.3750  3*           X /
+    PROD  6  5  1  1  OPEN  2*  0.3750  3*           X /
+    PROD  7  5  1  1  OPEN  2*  0.3750  3*           X /
+    PROD  8  5  1  1  OPEN  2*  0.3750  3*           X /
+
+    INJ   1  5  6  6  OPEN  2*  0.3750  2.16E05  2*  X /
+    INJ   2  5  6  6  OPEN  2*  0.3750  2.16E05  2*  X /
+    INJ   3  5  6  6  OPEN  2*  0.3750  2.16E05  2*  X /
+    INJ   4  5  6  6  OPEN  2*  0.3750  2.16E05  2*  X /
+    INJ   5  5  6  6  OPEN  2*  0.3750  2.16E05  2*  X /
+    INJ   6  5  6  6  OPEN  2*  0.3750  2.16E05  2*  X /
+    INJ   7  5  6  6  OPEN  2*  0.3750  2.16E05  2*  X /
+    INJ   8  5  6  6  OPEN  2*  0.3750  2.16E05  2*  X /
+    INJ   9  5  6  6  OPEN  2*  0.3750  2.16E05  2*  X /
+/

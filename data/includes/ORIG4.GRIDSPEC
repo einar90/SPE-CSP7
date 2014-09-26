@@ -14,8 +14,16 @@ TOPS
 -- Depth of top face of topmost grid blocks
     81*3590  /
 
+PORO
+   81*0.20000
+   81*0.20000
+   81*0.20001
+   81*0.20002
+   81*0.20003
+   81*0.20004
+/
+
 EQUALS
-    PORO    0.207   /
     PERMX   3000    /
     PERMY   3000    /
     PERMZ   300     /

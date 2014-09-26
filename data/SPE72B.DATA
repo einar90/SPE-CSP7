@@ -115,10 +115,7 @@ SCHEDULE =================================================================
 --  standard and LGC models.
 --
 INCLUDE
-   'includes/ORIGLONG.WELSPECS' /
-
-INCLUDE
-   'includes/ORIGLONG.COMPDAT' /
+   'includes/ORIGLONG.WELLS' /
 
 INCLUDE 
    'includes/CASE2.WCON' /

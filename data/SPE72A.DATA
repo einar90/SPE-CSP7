@@ -102,10 +102,7 @@ INCLUDE
 SCHEDULE =================================================================
 
 INCLUDE
-   'includes/ORIGSHORT.WELSPECS' /
-
-INCLUDE
-   'includes/ORIGSHORT.COMPDAT' /
+   'includes/ORIGSHORT.WELLS' /
 
 INCLUDE
    'includes/CASE2.WCON' /

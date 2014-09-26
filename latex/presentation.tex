@@ -3,6 +3,7 @@
 \documentclass{beamer}
 \usepackage[utf8]{inputenc}
 \usepackage{verbatim}
+\usepackage{booktabs}
 
 
 \input{presentationparts/about.tex}
@@ -25,7 +26,7 @@
 \begin{frame}
     \frametitle{Purpose}
     \begin{itemize}
-        \item The purpose of SPE CSP7 study was to compare the results of simulations performed by different organizations, using different simulators.
+        \item The purpose of SPE CSP7 study was to compare the results of simulations performed by different organizations, using different simulators on a problem invlolving production from a horizontal well.
         \item The purpose of this project was to recreate the results of the SPE CSP7 study; specifically the ECL100 results.
         \item Additionally, modifications were made to the model and the results compared to that of the original model.
     \end{itemize}
@@ -53,30 +54,6 @@
     \end{columns}
 \end{frame}
 
-\begin{frame}[fragile]
-    \frametitle{Original model: Grid - ECL implementation}
-        In the \texttt{RUNSPEC} section:
-        \begin{code}
-            \begin{verbatim}
-DIMENS
-    9  9  6  /
-            \end{verbatim}
-        \end{code}
-        
-        In the \texttt{GRID} section:
-        \begin{code}
-            \begin{verbatim}
-DXV
-    9*300  /
-
-DYV
-    620  400  200  100  60  100  200  400  620  /
-
-DZ
-    81*20  81*20  81*20  81*20  81*30  81*50  /
-            \end{verbatim}
-        \end{code}
-\end{frame}
 
 \subsection{Wells}
 \begin{frame}
@@ -93,6 +70,30 @@ DZ
              \item long producing well spanning blocks $(I,5,1), I=2,3,\dots,8$.
         \end{itemize}
         \item In both cases the injector spans blocks $(I,5,6),I=1,2,\dots,9$.
+    \end{itemize}
+\end{frame}
+
+\begin{frame}
+    \frametitle{Cases}
+    \footnotesize
+    \begin{tabular}{llll}
+        \toprule
+        \textbf{Case} & \textbf{Producer length} & \textbf{Liquid production rate} & \textbf{Injection scheme} \\
+        \midrule
+        1a            & $900$ ft                   & $3000$                          & $p = 3700$ psia           \\
+        1b            & $2100$ ft                  & $3000$                          & $p = 3700$ psia           \\
+        2a            & $900$ ft                   & $6000$                          & $p = 3700$ psia           \\
+        2b            & $2100$ ft                  & $6000$                          & $p = 3700$ psia           \\
+        3a            & $900$ ft                   & $9000$                          & $p = 3700$ psia           \\
+        3b            & $2100$ ft                  & $9000$                          & $p = 3700$ psia           \\
+        4a            & $900$ ft                   & $9000$                          & $q_w = 6000$ stb/day      \\
+        4b            & $2100$ ft                  & $9000$                          & $q_w = 6000$ stb/day      \\
+        \bottomrule
+    \end{tabular}
+    \normalsize
+    \begin{itemize}
+        \item Cases 1-3 examine the effects of rates and well lengths on recovery.
+        \item In case 4 the voidage relpacement ratio is less than unity, leading to a substantial amount of gas comming out of solution.
     \end{itemize}
 \end{frame}
 
@@ -119,7 +120,7 @@ is it indented?
 
 \begin{frame}
 	\begin{remark}
-		Sample text in green box. ``Examples'' is fixed as block title.
+		Sample text in green box.
 	\end{remark}
 \end{frame}
  

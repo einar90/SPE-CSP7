@@ -1,6 +1,9 @@
 % -*- root: ../eclipse-data.tex -*-
 
 \begin{tikzpicture}
+  \draw[color=lightgray,fill=lightgray] (0,4.39) rectangle (9,4.61); % Injector
+  \draw[color=lightgray,fill=gray] (1,4.40) rectangle (8,4.60); % Producer
+
   \draw[] (0,0) to (0,9) to (9,9) to (9,0) to (0,0);
   \foreach \x in {1,2,...,9} {
     \draw[] (\x,9) to (\x, 0);
@@ -41,5 +44,12 @@
 
   \node[anchor=south west] at (9,9) {\footnotesize $\Delta y$};
   \node[anchor=north] at (4.5,0) {\footnotesize $\Delta x = 300 \mathrm{ft} = \mathrm{constant}$};
+
+  \draw[color=lightgray,fill=lightgray] (0,-1.39) rectangle (2,-1.61); % Injector
+  \node[anchor=south west] at (2,-1.41) {Producing well (\emph{b} cases)};
+  \draw[color=gray,fill=gray] (0,-1.00) rectangle (2,-1.20); % Producer
+  \node[anchor=south west] at (2,-1.81) {Injection well};
+
+
 
 \end{tikzpicture}

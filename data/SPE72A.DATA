@@ -32,7 +32,7 @@ EQLDIMS
 --     RSWVD, RTEMPVD, PBVD or PDVD table entered.            = 2
 --  4: Max number of TVDP tables (init. tracer concentration) = 1
 --  5: Max number of depth nodes in any TVDP table.
-    1  100  2  1  2  /
+    1  100  6  1  2  /
 
 EQLOPTS
     QUIESC  MOBILE  /

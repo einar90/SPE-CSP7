@@ -81,7 +81,7 @@ RPTGRID
 PROPS   ==================================================================
 
 INCLUDE
-   'includes/ORIG.PVT' /
+   'includes/COMMON.PVT' /
 
 RPTPROPS
     SOF2  SOF3  TLMIPAR  SORWMIS  SWFN  SGCR  PVDO

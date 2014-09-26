@@ -40,6 +40,23 @@ PRVD
    3685  3633
    3725  3650 /
 
+SWAT 
+-- Initial water saturations
+   81*0.289
+   81*0.348  
+   81*0.473  
+   81*0.649  
+   81*0.869  
+   81*1.000  /
+
+SOIL 
+-- Initial oil saturations
+   81*0.711
+   81*0.652  
+   81*0.527  
+   81*0.351  
+   81*0.131  
+   81*0.000  /
 
 RPTSOL
     RESTART=2 POIL SOIL SWAT SGAS FIP=1 /

@@ -1,0 +1,34 @@
+-- Dimensions: 13x11x8
+
+DXV
+-- Vector of X-direction grid block sizes
+    4*300 4*150 1*300  4*150  /
+
+DYV
+-- Vector of Y-direction grid block sizes
+    620  400  200  100  24  12  24  100  200  400  620  /
+
+DZ
+-- Z-direction grid block sizes
+    143*8  143*4  143*8  143*20  143*20  143*20  143*30  143*50  /
+
+TOPS
+-- Depth of top face of topmost grid blocks
+    143*3590  /
+
+PORO
+   143*0.20000
+   143*0.20000
+   143*0.20000
+   143*0.20000
+   143*0.20001
+   143*0.20002
+   143*0.20003
+   143*0.20004
+/
+
+EQUALS
+    PERMX   300    /
+    PERMY   300    /
+    PERMZ   30     /
+/

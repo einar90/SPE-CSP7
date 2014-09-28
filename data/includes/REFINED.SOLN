@@ -4,8 +4,6 @@ DATUM
 PBUB
 -- Initial bubble point pressures in blocks 
     143*3600  
-    143*3600  
-    143*3600  
     143*3608  
     143*3616  
     143*3623  
@@ -14,8 +12,6 @@ PBUB
 
 PRVD
 -- Initial pressure vs. depth
-   3600  3600.0 
-   3600  3600.0 
    3600  3600.0 
    3620  3608.0
    3640  3616.0
@@ -26,8 +22,8 @@ PRVD
 SWAT 
 -- Initial water saturations
    143*0.289
-   143*0.289
-   143*0.289
+   143*0.318
+   143*0.333
    143*0.348  
    143*0.473  
    143*0.649  

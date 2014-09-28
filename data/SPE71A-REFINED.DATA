@@ -95,7 +95,7 @@ RPTPROPS
 SOLUTION =================================================================
 
 INCLUDE
-   'includes/REFINEDSHORT.SOLN' /
+   'includes/REFINED.SOLN' /
 
 SUMMARY ==================================================================
 

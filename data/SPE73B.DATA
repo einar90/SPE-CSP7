@@ -104,6 +104,9 @@ SCHEDULE =================================================================
 INCLUDE
    'includes/ORIGLONG.WELLS' /
 
+INCLUDE
+   'includes/ORIGLONG.WFRICTN' /
+
 INCLUDE 
    'includes/CASE3.WCON' /
 

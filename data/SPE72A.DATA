@@ -105,6 +105,9 @@ INCLUDE
    'includes/ORIGSHORT.WELLS' /
 
 INCLUDE
+   'includes/ORIGSHORT.WFRICTN' /
+
+INCLUDE
    'includes/CASE2.WCON' /
 
 RPTSCHED

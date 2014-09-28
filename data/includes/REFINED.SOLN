@@ -4,6 +4,8 @@ DATUM
 PBUB
 -- Initial bubble point pressures in blocks 
     143*3600  
+    143*3604  
+    143*3606  
     143*3608  
     143*3616  
     143*3623  

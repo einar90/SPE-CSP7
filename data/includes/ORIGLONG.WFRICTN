@@ -2,5 +2,5 @@ WFRICTN
 -- well name  tubing diam  roughness  scale fac
    PROD       0.375        10.0E-3    1.0 /
 -- I  J  K      Direction  RangeEnd  Tubing diam
-   2  5  1  2*  X          8         1* /
+   8  5  1  2*  X          2         1* /
 /

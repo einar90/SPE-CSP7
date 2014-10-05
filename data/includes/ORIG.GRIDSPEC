@@ -10,21 +10,18 @@ DZ
 -- Z-direction grid block sizes
     81*20  81*20  81*20  81*20  81*30  81*50  /
 
-TOPS
--- Depth of top face of topmost grid blocks
-    81*3590  /
+PERMX
+  486*300 /
+
+PERMY
+  486*300 /
+
+PERMZ
+  486*30 /
 
 PORO
-   81*0.20000
-   81*0.20000
-   81*0.20001
-   81*0.20002
-   81*0.20003
-   81*0.20004
-/
+   486*0.2 /
 
 EQUALS
-    PERMX   300    /
-    PERMY   300    /
-    PERMZ   30     /
+  'TOPS' 3590 1 9 1 9 1 1 /
 /

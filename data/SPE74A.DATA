@@ -107,6 +107,9 @@ INCLUDE
 
 SCHEDULE =================================================================
 
+NUPCOL
+   6 /
+
 INCLUDE
    'includes/ORIGSHORT4.WELLS' /
 

@@ -111,11 +111,10 @@ NUPCOL
    6 /
 
 TUNING
--- Setting LITMAX to 50
+-- Setting LITMAX to 50 and MXWSIT
    10* /
    10* /
-   2*  50  7* /
-/
+   2*  50  1*  15  /
 
 INCLUDE
    'includes/ORIGSHORT4.WELLS' /

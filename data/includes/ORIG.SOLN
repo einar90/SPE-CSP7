@@ -1,12 +1,43 @@
 -- Values are from ECL Tech. Desc., which contains an example with a code listing for this paper
 
-EQUIL
--- Dep Pres Dwoc Pcwoc Dgoc Pcgoc Rsvd Rvvd Fipc
-  3600 3600 3700 0.0   3590 0.0   1    0    0 /
-RSVD
--- Dep Rs
-  3500 1.41
-  3750 1.41
-/
+DATUM
+  3600.000 /
+
+PBUB
+-- Initial bubble point pressures in blocks 
+    81*3600  
+    81*3608  
+    81*3616  
+    81*3623  
+    81*3633  
+    81*3650 /
+
+PRVD
+-- Initial pressure vs. depth
+   3600  3600.0 
+   3620  3608.0
+   3640  3616.0
+   3660  3623.0
+   3685  3633.0
+   3725  3650.0 /
+
+SWAT 
+-- Initial water saturations
+   81*0.289
+   81*0.348  
+   81*0.473  
+   81*0.649  
+   81*0.869  
+   81*1.000  /
+
+SGAS 
+-- Initial gas saturations
+   81*0.00
+   81*0.00  
+   81*0.00  
+   81*0.00  
+   81*0.00  
+   81*0.00  /
+
 RPTSOL
     RESTART=2 POIL SOIL SWAT SGAS FIP=1 /

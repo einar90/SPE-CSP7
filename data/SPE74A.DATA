@@ -64,9 +64,6 @@ NSTACK
 FRICTION
    1  1 /
 
-FRICTION
-   1  1 /
-
 UNIFOUT
 UNIFIN
 
@@ -111,7 +108,7 @@ NUPCOL
    6 /
 
 TUNING
--- Setting LITMAX to 50 and MXWSIT
+-- Setting LITMAX to 50 and MXWSIT to 15
    10* /
    10* /
    2*  50  1*  15  /

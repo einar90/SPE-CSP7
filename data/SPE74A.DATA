@@ -59,7 +59,7 @@ START
     1  JAN  1990  /
 
 NSTACK
-    25  /
+    50  /
 
 FRICTION
    1  1 /
@@ -109,6 +109,13 @@ SCHEDULE =================================================================
 
 NUPCOL
    6 /
+
+TUNING
+-- Setting LITMAX to 50
+   10* /
+   10* /
+   2*  50  7* /
+/
 
 INCLUDE
    'includes/ORIGSHORT4.WELLS' /

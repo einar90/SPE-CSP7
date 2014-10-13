@@ -59,7 +59,7 @@ START
     1  JAN  1990  /
 
 NSTACK
-    50  /
+    100  /
 
 FRICTION
    1  1 /
@@ -114,7 +114,7 @@ TUNING
 -- Setting LITMAX to 50 and MXWSIT to 15
    10* /
    10* /
-   2*  50  1*  15  /
+   2*  100  1*  15  /
 
 INCLUDE
    'includes/REFINEDLONG.WELLS' /

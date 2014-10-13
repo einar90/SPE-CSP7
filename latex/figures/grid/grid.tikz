@@ -1,4 +1,4 @@
-% -*- root: ../eclipse-data.tex -*-
+% -*- root: ../../eclipse-data.tex -*-
 
 \begin{tikzpicture}
   \draw[color=lightgray,fill=lightgray] (0,4.39) rectangle (9,4.61); % Injector

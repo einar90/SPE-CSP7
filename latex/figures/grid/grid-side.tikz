@@ -1,4 +1,4 @@
-% -*- root: ../plots.tex -*-
+% -*- root: ../../plots.tex -*-
 \begin{tikzpicture}[xscale=0.7]
     \draw[color=lightgray,fill=lightgray] (0,.50) rectangle (9,.70);
     \draw[color=gray,fill=gray] (1,3.65) rectangle (8,3.85);

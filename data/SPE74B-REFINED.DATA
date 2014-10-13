@@ -108,7 +108,7 @@ INCLUDE
 SCHEDULE =================================================================
 
 NUPCOL
-   6 /
+   15 /
 
 TUNING
 -- Setting LITMAX to 50 and MXWSIT to 15

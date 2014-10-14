@@ -1,0 +1,21 @@
+% -*- root: ../../../plots.tex -*-
+
+\begin{tikzpicture}
+\begin{axis}[
+    ybar,
+    enlargelimits=0.15,
+    legend style={at={(0.5,-0.15)},
+      anchor=north,legend columns=-1},
+    ylabel={MSTB after 1500 days},
+    symbolic x coords={1a,1b,2a,2b,3a,3b,4a,4b},
+    xtick=data,
+    bar width=15pt,
+    nodes near coords,
+    nodes near coords align={vertical},
+    ]
+\addplot coordinates {(1a,757) (1b,951) (2a,1034) (2b,1251) (3a,1229) (3b,1445) (4a,696) (4b,827) };
+\addplot coordinates {(1a,736) (1b,947) (2a,971)  (2b,1223) (3a,1099) (3b,1365) (4a,674) (4b,824) };
+\addplot coordinates {(1a,703) (1b,925) (2a,923)  (2b,1194) (3a,1049) (3b,1344) (4a,705) (4b,824) };
+\legend{Paper,Original grid,Refined grid}
+\end{axis}
+\end{tikzpicture}

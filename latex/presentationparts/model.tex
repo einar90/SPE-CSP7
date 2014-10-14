@@ -1,0 +1,41 @@
+% -*- root: ../presentation.tex -*-
+\section{Original model}
+\begin{frame}
+    \frametitle{Original model}
+\end{frame}
+
+\subsection{Grid}
+\begin{frame}
+    \frametitle{Original model: Grid}
+    \begin{columns}[c]
+        \column{0.7\textwidth}
+            \includegraphics[width=\textwidth]{figures/grid/grid.pdf}
+        \column{0.45\textwidth}
+            \includegraphics[width=\textwidth]{figures/grid/grid-side.pdf}
+            \begin{itemize}
+                \item $9\times 9 \times 6$ blocks.
+                \item Constant $\Delta x$.
+                \item Variable $\Delta y$ and $\Delta z$. 
+                \item Smaller blocks around the producing well.
+            \end{itemize}
+    \end{columns}
+\end{frame}
+
+
+\subsection{Wells}
+\begin{frame}
+    \frametitle{Original model: Wells}
+    \begin{itemize}
+        \item The model has two wells:
+            \begin{itemize}
+                \item Producer in top layer.
+                \item Injector in bottom layer.
+            \end{itemize}
+        \item There are two variations on the model:
+        \begin{itemize}
+             \item short producing well spanning blocks $(I,5,1), I=6,7,8$.
+             \item long producing well spanning blocks $(I,5,1), I=2,3,\dots,8$.
+        \end{itemize}
+        \item In both cases the injector spans blocks $(I,5,6),I=1,2,\dots,9$.
+    \end{itemize}
+\end{frame}

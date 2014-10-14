@@ -59,7 +59,7 @@ START
     1  JAN  1990  /
 
 NSTACK
-    25  /
+    150  /
 
 FRICTION
    1  1 /
@@ -102,7 +102,19 @@ SUMMARY ==================================================================
 INCLUDE
    'includes/COMMON.SMRY' /
 
+INCLUDE
+   'includes/REFINEDSHORT.SMRY' /
+
 SCHEDULE =================================================================
+
+NUPCOL
+   25 /
+
+TUNING
+-- Setting LITMAX to 150 and MXWSIT to 50
+   10* /
+   10* /
+   2*  150  1*  50  /
 
 INCLUDE
    'includes/REFINEDSHORT.WELLS' /

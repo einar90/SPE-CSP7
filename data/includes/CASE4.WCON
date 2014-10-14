@@ -5,5 +5,5 @@ WCONPROD
 
 WCONINJE
 --  Water injector; controlled by surface inj. rate; target 6000
-    INJ  WATER  OPEN  RESV 1*  6000  /
+    INJ  WATER  OPEN  RESV 1*  6000  3700  /
 /

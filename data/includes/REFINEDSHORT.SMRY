@@ -1,0 +1,35 @@
+CLFR
+-- Connection Liquid Flow Rate
+   'PROD'  7  6  2 /
+   'PROD'  8  6  2 /
+   'PROD'  9  6  2 /
+   'PROD'  10 6  2 /
+   'PROD'  11 6  2 /
+/
+
+CPR
+-- Connection Pressure
+   'PROD'  7  6  2 /
+   'PROD'  8  6  2 /
+   'PROD'  9  6  2 /
+   'PROD'  10 6  2 /
+   'PROD'  11 6  2 /
+/
+
+CPI
+-- Connection Productivity Index
+   'PROD'  7  6  2 /
+   'PROD'  8  6  2 /
+   'PROD'  9  6  2 /
+   'PROD'  10 6  2 /
+   'PROD'  11 6  2 /
+/
+
+CTFAC
+-- Connection Transmissibility Factor
+   'PROD'  7  6  2 /
+   'PROD'  8  6  2 /
+   'PROD'  9  6  2 /
+   'PROD'  10 6  2 /
+   'PROD'  11 6  2 /
+/

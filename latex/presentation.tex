@@ -32,46 +32,7 @@
     \end{itemize}
 \end{frame}
 
-\section{Original model}
-\begin{frame}
-    \frametitle{Original model}
-\end{frame}
-
-\subsection{Grid}
-\begin{frame}
-    \frametitle{Original model: Grid}
-    \begin{columns}[c]
-        \column{0.7\textwidth}
-            \includegraphics[width=\textwidth]{figures/grid.pdf}
-        \column{0.45\textwidth}
-            \includegraphics[width=\textwidth]{figures/grid-side.pdf}
-            \begin{itemize}
-                \item $9\times 9 \times 6$ blocks.
-                \item Constant $\Delta x$.
-                \item Variable $\Delta y$ and $\Delta z$. 
-                \item Smaller blocks around the producing well.
-            \end{itemize}
-    \end{columns}
-\end{frame}
-
-
-\subsection{Wells}
-\begin{frame}
-    \frametitle{Original model: Wells}
-    \begin{itemize}
-        \item The model has two wells:
-            \begin{itemize}
-                \item Producer in top layer.
-                \item Injector in bottom layer.
-            \end{itemize}
-        \item There are two variations on the model:
-        \begin{itemize}
-             \item short producing well spanning blocks $(I,5,1), I=6,7,8$.
-             \item long producing well spanning blocks $(I,5,1), I=2,3,\dots,8$.
-        \end{itemize}
-        \item In both cases the injector spans blocks $(I,5,6),I=1,2,\dots,9$.
-    \end{itemize}
-\end{frame}
+\input{presentationparts/model.tex}
 
 \begin{frame}
     \frametitle{Cases}
@@ -97,13 +58,13 @@
     \end{itemize}
 \end{frame}
 
-% Differences:
-% 18.9000     9.1000    32.1000    17.3000    41.8000    22.6000  -512.7000  -739.9000
-% 30.8000    42.5000    37.8000    66.0000    38.1000    75.4000  -595.3000  -740.3000
-%
-% Deviations:
-% 0.0249604   0.0095689   0.0310385   0.0138289   0.0340086   0.0156423  -0.7358978  -0.8942470
-% 0.0406762   0.0446898   0.0365500   0.0527578   0.0309983   0.0521872  -0.8544567  -0.8947305
+
+\begin{frame}
+    \centerline{
+    \includegraphics[width=1.15\textwidth]{figures/plots/combinations/fopt.pdf}}
+\end{frame}
+
+
 \begin{frame}
     \frametitle{Deviations}
     Total oil production in MSTB after 1500 days.
@@ -112,22 +73,24 @@
     
     \footnotesize
     \begin{columns}[c]
-        \column{1.2\textwidth}
+        \column{1.1\textwidth}
         \begin{tabular}{lllllllll}
          \toprule
          \textbf{Case}        & 1a     & 1b     & 2a     & 2b     & 3a     & 3b     & 4a     & 4b  \\
          \midrule
-         \textbf{Paper (ECL)} & 757.2  & 951.0  & 1034.2 & 1251.0 & 1229.1 & 1444.8 & 696.7  & 827.4  \\
+         \textbf{Paper\footnote{SPE-CSP7, ECL100 results}} & 757.2  & 951.0  & 1034.2 & 1251.0 & 1229.1 & 1444.8 & 696.7  & 827.4  \\
          \midrule
-         \textbf{Orig. grid}  & 738.3  & 941.9  & 1002.1 & 1233.7 & 1187.3 & 1422.2 & 1209.4 & 1567.3 \\
-         Deviation            & 2.5\%  & 1.0\%  & 3.1\%  & 1.4\%  & 3.4\%  & 1.6\%  & -73.6\%& -89.4\%\\
+         \textbf{Orig.\footnote{Original $9\times 9\times 6$ grid}}  & 736.3  & 947.0  & 971.7  & 1222.7 & 1098.8 & 1364.9 & 674.6  & 824.1  \\
+         Deviation            & 2.8\%  &  0.4\% &  6.4\% &  2.3\% & 11.9\% &  5.9\% &  3.3\% &  0.4\%   \\
          \midrule
-         \textbf{Ref. grid}   & 726.4  & 908.5  & 996.4  & 1185.0 & 1191.0 & 1369.4 & 1292.0 & 1567.7 \\
-         Deviation            & 4.1\%  & 4.5\%  & 3.7\%  & 5.3\%  & 3.1\%  & 5.2\%  & -85.4\%& -89.5\%\\
+         \textbf{Ref.\footnote{Refined $13\times 11\times 8$ grid}}   & 702.6  & 924.5  & 923.8  & 1194.4 & 1048.7 & 1343.8 & 705.3  & 824.0  \\
+         Deviation            & 7.2\%   & 2.8\% &10.6\%  & 4.5\% &14.7\% & 7.0\% & 1.2\% & 0.4\%   \\
          \bottomrule
         \end{tabular}
     \end{columns}
 \end{frame}
+
+
 
 \begin{frame}[fragile]
 	\frametitle{Sample frame title}

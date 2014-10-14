@@ -108,6 +108,9 @@ SUMMARY ==================================================================
 INCLUDE
    'includes/COMMON.SMRY' /
 
+INCLUDE
+   'includes/ORIGLONG.SMRY' /
+
 SCHEDULE =================================================================
 
 --DRSDT

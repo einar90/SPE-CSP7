@@ -1,0 +1,44 @@
+% -*- root: ../../../plots.tex -*-
+\pgfplotsset{legend style={legend columns=2}}
+\begin{tikzpicture}
+    \begin{axis}[
+        title={Gas-oil ratio for cases 3a \& 3b},
+        xlabel={Time (days)},
+        xtick={200,400,...,1600},
+        ylabel={GOR (scf/stb)},
+        xtick={200,400,...,1600},
+        xmin=0, xmax=1500,
+        ]        
+        \addplot[color=red, mark=o] 
+                table[  x=TIME, 
+                        y expr={\thisrow{WGPR:PROD} / \thisrow{WOPR:PROD}}, 
+                        col sep=comma, skip coords between index={0}{1}
+                     ]
+                {data/spe73a.csv}; 
+        \addplot[color=red, mark=o, dashed] 
+                table[  x=TIME, 
+                        y expr={\thisrow{WGPR:PROD} / \thisrow{WOPR:PROD}}, 
+                        col sep=comma, skip coords between index={0}{1}
+                     ]
+                {data/spe73a-refined.csv};
+
+        \addplot[color=blue, mark=x] 
+                table[  x=TIME, 
+                        y expr={\thisrow{WGPR:PROD} / \thisrow{WOPR:PROD}}, 
+                        col sep=comma, skip coords between index={0}{1}
+                     ]
+                {data/spe73b.csv};
+ 
+        \addplot[color=blue, mark=x, dashed] 
+                table[  x=TIME, 
+                        y expr={\thisrow{WGPR:PROD} / \thisrow{WOPR:PROD}}, 
+                        col sep=comma, skip coords between index={0}{1}
+                     ]
+                {data/spe73b-refined.csv};
+
+        \addlegendentry{3a: Original grid};
+        \addlegendentry{3a: Refined grid};
+        \addlegendentry{3b: Original grid};
+        \addlegendentry{3b: Refined grid};
+    \end{axis}
+\end{tikzpicture}

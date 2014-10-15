@@ -1,0 +1,106 @@
+% -*- root: ../presentation.tex -*-
+\section{Friction}
+
+%==============================================================================
+\begin{frame}[fragile]
+    \frametitle{Friction}
+    \begin{itemize}
+        \item Friction in the producing well is accounted for using the \texttt{WFRICTN}-keyword:
+    \end{itemize}
+
+\vspace{1em}
+
+    \begin{code}
+        \begin{verbatim}
+WFRICTN
+-- well name  tubing diam  roughness  scale
+   PROD       0.375        10.0E-3    1.0 /
+-- I  J  K      Direction  RangeEnd   Tubing diam
+   8  5  1  2*  X          2          1* /
+/
+        \end{verbatim}
+    \end{code}
+
+    \begin{itemize}
+        \item Enables calculation of pressure losses between connections and the well's bottom hole reference point.
+    \end{itemize}
+
+\end{frame}
+%==============================================================================
+
+
+\subsection{Pressure drop along wellbore}
+%==============================================================================
+\begin{frame}
+    \frametitle{Friction: Pressure Drop Along Wellbore}
+    \centerline{\input{figures/plots/friction/friction-combined-case1.tikz}}
+\end{frame}
+%==============================================================================
+
+
+%==============================================================================
+\begin{frame}
+    \frametitle{Friction: Pressure Drop Along Wellbore}
+    \centerline{\input{figures/plots/friction/friction-long.tikz}}
+\end{frame}
+%==============================================================================
+
+
+%==============================================================================
+\begin{frame}
+    \frametitle{Friction: Pressure Drop Along Wellbore}
+    \centerline{\input{figures/plots/friction/friction-short.tikz}}
+\end{frame}
+%==============================================================================
+
+%==============================================================================
+\begin{frame}
+    \frametitle{Friction: Pressure Drop Along Wellbore}
+    \centerline{\input{figures/plots/friction/friction-case1-d1-refined-comparison.tikz}}
+\end{frame}
+\begin{frame}
+    \begin{itemize}
+        \item The refined model has more blocks in the $I$-direction.
+        \item The second block and the second-to-last block were dropped from the data set to make it ``compatible'' with the original data set.
+        \begin{itemize}
+            \item This explains why the pressure drop in the eigth block is higher in the refined model: the block called the eigth block in the refined data set is actually block 11, which is closer to the bottom hole reference point.
+        \end{itemize}
+    \end{itemize}
+\end{frame}
+%==============================================================================
+
+\subsection{Model}
+%==============================================================================
+\begin{frame}
+    \frametitle{Friction: Model}
+    According to R.A. Archer \& E.O Agbongiator\footnote{R.A. Archer, E.O. Agbongiator. \emph{Correcting for Frictional Pressure Drop in Horizontal-Well Inflow-Performance Relationships}. Society of Petroleum Engineers, 2005}, wellbore pressure drops in horizontal wells may be modelled with equation \ref{eq:friction}.
+    \begin{equation}
+        \label{eq:friction}
+        \Delta p_f = \frac{C_f L f \rho q_f^2}{D^5}
+    \end{equation}
+    where
+    \begin{description}
+        \item[$C_f=$] unit conversion factor, 
+        \item[$f=$] Fanning friction factor,
+        \item[$L=$] length of productive horizontal interval, ft,
+        \item[$\rho=$] density of produced fluid, lb/ft3, and
+        \item[$D=$] wellbore diameter, ft.
+    \end{description}
+\end{frame}
+%==============================================================================
+
+
+
+%==============================================================================
+\begin{frame}
+    \frametitle{Friction: Model (2)}
+    \begin{itemize}
+            \item Pressure drop increases with the square of the flow rate.
+            \item Flow rate ``accumulates'' along the length of the wellbore towards the heel.
+            \begin{itemize}
+                \item The flow rate will be higher at the heel.
+                \item The pressure drop will be higher at the heel.
+            \end{itemize}
+        \end{itemize}    
+\end{frame}
+%==============================================================================

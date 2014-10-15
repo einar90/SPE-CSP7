@@ -4,7 +4,7 @@
 		{
 			"follow_symlinks": true,
 			"path": ".",
-      "file_exclude_patterns": ["*.fls", "*.gz", "*.fdb_latexmk", "*.aux", "*.log", 
+            "file_exclude_patterns": ["*.fls", "*.gz", "*.fdb_latexmk", "*.aux", "*.log", 
                                 "*.pdf", "*.bbl", "*.blg", "*.bib~", "*.vrb", "*.toc",
                                 "*.snm", "*.nav", "*.out", "*.ptex"]
 		}

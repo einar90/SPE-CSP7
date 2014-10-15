@@ -1,0 +1,50 @@
+% -*- root: ../../../plots.tex -*-
+\begin{tikzpicture}[font = \sffamily]
+\pgfplotsset{legend style={legend columns=6}}
+\pgfplotsset{legend style={at={(0.5,-0.30)}, font=\footnotesize}}
+\pgfplotsset{width=1.0\textwidth, height=0.7\textheight}
+    \begin{axis}[
+        xlabel={Time (days)},
+        ylabel={Cumulative Oil (stb)},
+        xtick={200,400,...,1600},
+        ymin=0, 
+        xmin=0, xmax=1500,
+        axis y line*=left,
+        xlabel near ticks,
+        ylabel near ticks
+        ]
+        \addplot[color=red, mark=o] table[x=TIME, y=WOPT:PROD, col sep=comma, skip coords between index={0}{1}]{data/spe71a.csv};
+        \addplot[color=red, mark=x] table[x=TIME, y=WOPT:PROD, col sep=comma, skip coords between index={0}{1}]{data/spe71b.csv};
+        \addplot[color=green, mark=o] table[x=TIME, y=WOPT:PROD, col sep=comma, skip coords between index={0}{1}]{data/spe72a.csv};
+        \addplot[color=green, mark=x] table[x=TIME, y=WOPT:PROD, col sep=comma, skip coords between index={0}{1}]{data/spe72b.csv};
+        \addplot[color=blue, mark=o] table[x=TIME, y=WOPT:PROD, col sep=comma, skip coords between index={0}{1}]{data/spe73a.csv};
+        \addplot[color=blue, mark=x] table[x=TIME, y=WOPT:PROD, col sep=comma, skip coords between index={0}{1}]{data/spe73b.csv};
+    \end{axis}
+    \begin{axis}[
+        ymin=0, ymax=4000,
+        xmin=0, xmax=1500,
+        ylabel={Oil rate (stb/day)},
+        hide x axis,
+        axis y line*=right,
+        ylabel near ticks,
+        legend entries={1a,
+                        1b,
+                        2a,
+                        2b,
+                        3a,
+                        3b},
+        ]
+        \addplot[color=red, mark=o] table[x=TIME, y=WOPR:PROD, col sep=comma, skip coords between index={0}{1}]{data/spe71a.csv};
+        \addplot[color=red, mark=x] table[x=TIME, y=WOPR:PROD, col sep=comma, skip coords between index={0}{1}]{data/spe71b.csv};
+        \addplot[color=green, mark=o] table[x=TIME, y=WOPR:PROD, col sep=comma, skip coords between index={0}{1}]{data/spe72a.csv};
+        \addplot[color=green, mark=x] table[x=TIME, y=WOPR:PROD, col sep=comma, skip coords between index={0}{1}]{data/spe72b.csv};
+        \addplot[color=blue, mark=o] table[x=TIME, y=WOPR:PROD, col sep=comma, skip coords between index={0}{1}]{data/spe73a.csv};
+        \addplot[color=blue, mark=x] table[x=TIME, y=WOPR:PROD, col sep=comma, skip coords between index={0}{1}]{data/spe73b.csv};
+        \addlegendimage{mark=o, red}
+        \addlegendimage{mark=x, red}
+        \addlegendimage{mark=o, green}
+        \addlegendimage{mark=x, green}
+        \addlegendimage{mark=o, blue}
+        \addlegendimage{mark=x, blue}
+      \end{axis}
+\end{tikzpicture}

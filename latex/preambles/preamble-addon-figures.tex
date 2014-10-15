@@ -18,7 +18,22 @@
                            at={(0.5,-0.20)},
                            anchor=north,
                            legend cell align=left,
-                           legend columns=4,
+                           legend columns=3,
+                           font=\sffamily,
                            column sep=0.3cm}}
 \pgfplotsset{width=20cm, height=12cm}
-\pgfplotsset{x tick label style={align=center}}
+\pgfplotsset{
+every axis label/.append style={font=\sffamily},
+tick label style={font=\sffamily},
+}
+
+\definecolor{red}{RGB}{255,50,50}  % ---|Color for line-numbers.
+\definecolor{green}{RGB}{50,200,50} % Background color for listings.
+\definecolor{blue}{RGB}{50,50,255} % -| Dark green for comments.
+\definecolor{gray}{RGB}{100,100,100} % -| Dark green for comments.
+
+% \pgfplotsset{
+% every axis label/.append style={font=\LARGE\sffamily},
+% title style={font=\huge\sffamily},
+% tick label style={font=\sffamily\LARGE},
+% }

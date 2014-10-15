@@ -1,0 +1,44 @@
+% -*- root: ../../../plots.tex -*-
+\begin{tikzpicture}
+\pgfplotsset{legend style={legend columns=5}}
+\pgfplotsset{legend style={at={(0.5,-0.30)}, font=\footnotesize}}
+\pgfplotsset{width=1.0\textwidth, height=0.7\textheight}
+    \begin{axis}[
+        xlabel={Time (days)},
+        xtick={200,400,...,1600},
+        ylabel={Cum. Gas Prod. (scf/day)},
+        xtick={200,400,...,1600},
+        ymin=0,
+        xmin=0, xmax=1500,
+        ]        
+        \addplot[color=red, mark=o] table[  x=TIME, y=FGPT, col sep=comma, skip coords between index={0}{1}]{data/spe71a.csv}; 
+        \addlegendentry{1a};
+        
+        \addplot[color=red, mark=x] table[  x=TIME, y=FGPT, col sep=comma, skip coords between index={0}{1}]{data/spe71b.csv}; 
+        \addlegendentry{1b};
+
+        \addplot[color=green, mark=o] table[  x=TIME, y=FGPT, col sep=comma, skip coords between index={0}{1}]{data/spe72a.csv}; 
+        \addlegendentry{2a};
+
+        \addplot[color=green, mark=x] table[  x=TIME, y=FGPT, col sep=comma, skip coords between index={0}{1}]{data/spe72b.csv}; 
+        \addlegendentry{2b};
+
+        \addplot[color=blue, mark=o] table[  x=TIME, y=FGPT, col sep=comma, skip coords between index={0}{1}]{data/spe73a.csv}; 
+        \addlegendentry{3a};
+
+        \addplot[color=blue, mark=x] table[  x=TIME, y=FGPT, col sep=comma, skip coords between index={0}{1}]{data/spe73b.csv}; 
+        \addlegendentry{3b};
+
+        \addplot[color=gray, mark=o] table[  x=TIME, y=FGPT, col sep=comma, skip coords between index={0}{1}]{data/spe74a.csv}; 
+        \addlegendentry{4a};
+
+        \addplot[color=gray, mark=x] table[  x=TIME, y=FGPT, col sep=comma, skip coords between index={0}{1}]{data/spe74b.csv}; 
+        \addlegendentry{4b};
+
+        \addplot[color=gray, mark=o, dashed] table[  x=TIME, y=FGPT, col sep=comma, skip coords between index={0}{1}]{data/spe74a-refined.csv}; 
+        \addlegendentry{4a (r)};
+
+        \addplot[color=gray, mark=x, dashed] table[  x=TIME, y=FGPT, col sep=comma, skip coords between index={0}{1}]{data/spe74b-refined.csv}; 
+        \addlegendentry{4b (r)};
+    \end{axis}
+\end{tikzpicture}

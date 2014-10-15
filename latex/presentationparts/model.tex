@@ -1,30 +1,74 @@
 % -*- root: ../presentation.tex -*-
-\section{Original model}
+\section{Model}
+
+%==============================================================================
+\subsection{Reservoir properties}
 \begin{frame}
-    \frametitle{Original model}
+    \frametitle{Reservoir Properties}
+    \begin{itemize}
+        \item Black Oil fluid model used.
+        \item The initial fluids present are water, oil and solution gas.
+        \begin{itemize}
+            \item The reservoir is undersaturated $\rightarrow$ no free gas.
+        \end{itemize}
+        \item Note that the porosity in the paper is given as
+        \begin{equation}
+            \phi = \phi^* [1 + c_\phi (p_o - p^*)],
+        \end{equation}
+        which corresponds to values in the range $[0.20000,0.20004]$. However, this is approximated to $0.2$.
+    \end{itemize}
 \end{frame}
 
-\subsection{Grid}
+\subsection{Original Grid Model}
 \begin{frame}
-    \frametitle{Original model: Grid}
-    \begin{columns}[c]
-        \column{0.7\textwidth}
-            \includegraphics[width=\textwidth]{figures/grid/grid.pdf}
-        \column{0.45\textwidth}
-            \includegraphics[width=\textwidth]{figures/grid/grid-side.pdf}
-            \begin{itemize}
-                \item $9\times 9 \times 6$ blocks.
-                \item Constant $\Delta x$.
-                \item Variable $\Delta y$ and $\Delta z$. 
-                \item Smaller blocks around the producing well.
-            \end{itemize}
-    \end{columns}
+    \frametitle{Original Grid Model}
+    \begin{itemize}
+        \item $9 \times 9 \times 6$ grid.
+        \item One producer and one injector.
+        \item Constant $\Delta x$.
+        \item Variable $\Delta y$ and $\Delta z$.
+        \item Smaller blocks around the producer.
+    \end{itemize}
 \end{frame}
+%==============================================================================
 
 
-\subsection{Wells}
+
+%==============================================================================
 \begin{frame}
-    \frametitle{Original model: Wells}
+    \frametitle{Original Grid Model - Top view}
+    \footnotesize
+    \vspace{-1.5em}
+    \begin{center}
+        \input{figures/grid/grid.tikz}
+    \end{center}
+\end{frame}
+%==============================================================================
+
+
+%==============================================================================
+\begin{frame}
+    \frametitle{Original Grid Model - Side view}
+    \begin{center}
+        \input{figures/grid/grid-side.tikz}
+    \end{center}
+\end{frame}
+%==============================================================================
+
+
+%==============================================================================
+\begin{frame}
+    \frametitle{Original Grid Model - 3D}
+    \begin{center}
+        \includegraphics[width=\textwidth]{figures/resinsight/1b-start.png}
+    \end{center}
+\end{frame}
+%==============================================================================
+
+
+%==============================================================================
+\begin{frame}
+    \frametitle{Original Grid Model - Wells}
     \begin{itemize}
         \item The model has two wells:
             \begin{itemize}
@@ -33,9 +77,77 @@
             \end{itemize}
         \item There are two variations on the model:
         \begin{itemize}
-             \item short producing well spanning blocks $(I,5,1), I=6,7,8$.
-             \item long producing well spanning blocks $(I,5,1), I=2,3,\dots,8$.
+             \item short producing well with $L=900$ ft, spanning blocks $(I,5,1), I=6,7,8$.
+             \item long producing well with $L=2100$ ft, spanning blocks $(I,5,1), I=2,3,\dots,8$.
         \end{itemize}
         \item In both cases the injector spans blocks $(I,5,6),I=1,2,\dots,9$.
     \end{itemize}
 \end{frame}
+%==============================================================================
+
+
+%==============================================================================
+\subsection{Refined Grid Model}
+\begin{frame}
+    \frametitle{Refined Grid Model}
+    \begin{itemize}
+        \item The ECL100 section of the paper describes how they performed the simulation. It includes a Local Grid Refinement (LGR) around the producing well.
+        \begin{itemize}
+            \item The top layer is split into three new layers with $\Delta z = 8ft, 4ft, 8ft$. The middle layer contains the well.
+            \item The original center row is split into three new rows with $\Delta y = 24ft, 12ft, 24ft$.
+            \item Two blocks at each end of the producing well were refined into four new blocks with equal $\Delta x$ values.
+        \end{itemize}
+        \item This results in \emph{two} different $13 \times 11 \times 8$ grids because the grid is refined differently for the two different well placements.
+        \item In the paper this is implemented using the LGR extension. I decided to refine the global grid.
+    \end{itemize}
+\end{frame}
+%==============================================================================
+
+
+%==============================================================================
+\begin{frame}
+    \frametitle{Refined Grid Model - Top view (Long well)}
+    \begin{center}
+        \input{figures/grid/grid_refined.tikz}
+    \end{center}
+\end{frame}
+%==============================================================================
+
+
+%==============================================================================
+\begin{frame}
+    \frametitle{Refined Grid Model - Side view (Long well)}
+    \begin{center}
+        \input{figures/grid/grid_refined-side.tikz}
+    \end{center}
+\end{frame}
+%==============================================================================
+
+%==============================================================================
+\begin{frame}
+    \frametitle{Refined Grid Model - 3D}
+    \begin{center}
+        \includegraphics[width=\textwidth]{figures/resinsight/1b-refined-end.png}
+    \end{center}
+\end{frame}
+%==============================================================================
+
+
+%==============================================================================
+\begin{frame}
+    \frametitle{Refined Grid Model: Wells}
+    \begin{itemize}
+        \item Still two wells:
+        \begin{itemize}
+            \item Producer in second layer from the top.
+            \item Injector in bottom layer.
+        \end{itemize}
+        \item Still two variations on the producer:
+        \begin{itemize}
+            \item short well with length $L=900$ ft, spanning blocks $(I,6,2), I=7,8,...,11$.
+            \item long well with length $L=2100$ ft, spanning blocks $(I,6,2), I=3,4,...,11$.
+        \end{itemize}
+        \item In both cases the injector spans $(I,6,2), I=1,2,...,13$.
+    \end{itemize}
+\end{frame}
+%==============================================================================

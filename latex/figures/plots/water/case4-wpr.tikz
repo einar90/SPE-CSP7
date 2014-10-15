@@ -1,0 +1,29 @@
+% -*- root: ../../../plots.tex -*-
+\begin{tikzpicture}
+\pgfplotsset{legend style={legend columns=2}}
+\pgfplotsset{legend style={at={(0.5,-0.30)}, font=\footnotesize}}
+\pgfplotsset{width=1.0\textwidth, height=0.7\textheight}
+    \begin{axis}[
+        xlabel={Time (days)},
+        xtick={200,400,...,1600},
+        ylabel={WPR (stb/dar)},
+        xtick={200,400,...,1600},
+        ymin=0,
+        xmin=0, xmax=1500,
+        ]        
+        \addplot[color=red, mark=o] 
+                table[  x=TIME, y=WWPR:PROD, col sep=comma, skip coords between index={0}{1}]{data/spe74a.csv}; 
+        \addplot[color=red, mark=o, dashed] 
+                table[  x=TIME, y=WWPR:PROD, col sep=comma, skip coords between index={0}{1}]{data/spe74a-refined.csv}; 
+
+        \addplot[color=blue, mark=o] 
+                table[  x=TIME, y=WWPR:PROD, col sep=comma, skip coords between index={0}{1}]{data/spe74b.csv}; 
+        \addplot[color=blue, mark=o, dashed] 
+                table[  x=TIME, y=WWPR:PROD, col sep=comma, skip coords between index={0}{1}]{data/spe74b-refined.csv}; 
+
+        \addlegendentry{4a: Original grid};
+        \addlegendentry{4a: Refined grid};
+        \addlegendentry{4b: Original grid};
+        \addlegendentry{4b: Refined grid};
+    \end{axis}
+\end{tikzpicture}

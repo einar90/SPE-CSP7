@@ -1,6 +1,6 @@
 % -*- root: ../../eclipse-data.tex -*-
 
-\begin{tikzpicture}
+\begin{tikzpicture}[scale=.8]
   \draw[color=lightgray,fill=lightgray] (0,4.39) rectangle (9,4.61); % Injector
   \draw[color=lightgray,fill=gray] (1,4.40) rectangle (8,4.60); % Producer
 
@@ -45,10 +45,10 @@
   \node[anchor=south west] at (9,9) {\footnotesize $\Delta y$};
   \node[anchor=north] at (4.5,0) {\footnotesize $\Delta x = 300 \mathrm{ft} = \mathrm{constant}$};
 
-  \draw[color=lightgray,fill=lightgray] (0,-1.39) rectangle (2,-1.61); % Injector
-  \node[anchor=south west] at (2,-1.41) {Producing well (\emph{b} cases)};
-  \draw[color=gray,fill=gray] (0,-1.00) rectangle (2,-1.20); % Producer
-  \node[anchor=south west] at (2,-1.81) {Injection well};
+  \draw[color=lightgray,fill=lightgray] (11,5.69) rectangle (12,5.91); % Injector
+  \node[anchor=west] at (12,5.81) {Injector};
+  \draw[color=gray,fill=gray] (11,5.00) rectangle (12,5.20); % Producer
+  \node[anchor=west,align=left] at (12,4.7) {Producer \\(\emph{b} cases)};
 
 
 

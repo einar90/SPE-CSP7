@@ -28,7 +28,7 @@
 %    
 
 
-\begin{tikzpicture}
+\begin{tikzpicture}[scale=0.8]
 % WELLS =======================================================================
   \draw[color=lightgray,fill=lightgray] (0,4.46) rectangle (9,4.54); % Injector
   \draw[color=lightgray,fill=gray] (1,4.47) rectangle (8,4.53); % Producer
@@ -104,13 +104,5 @@
   \node[anchor=west] at (10.25,4.20) {\footnotesize 24 ft};
 
   \node[anchor=north] at (4.5,0) {\footnotesize $\Delta x = 300 \mathrm{ft} = \mathrm{constant}$};
-
-% LEGEND ======================================================================
-  \draw[color=lightgray,fill=lightgray] (0,-1.39) rectangle (2,-1.61); % Injector
-  \node[anchor=south west] at (2,-1.41) {Producing well (\emph{b} cases)};
-  \draw[color=gray,fill=gray] (0,-1.00) rectangle (2,-1.20); % Producer
-  \node[anchor=south west] at (2,-1.81) {Injection well};
-
-
 
 \end{tikzpicture}

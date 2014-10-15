@@ -1,10 +1,5 @@
-% -*- program: xelatex -*-
-
-\documentclass{beamer}
-\usepackage[utf8]{inputenc}
-\usepackage{verbatim}
-\usepackage{booktabs}
-
+\input{preambles/preamble-presentation.tex}
+\input{preambles/preamble-addon-figures.tex}
 
 \input{presentationparts/about.tex}
  
@@ -22,89 +17,16 @@
     \tableofcontents
 \end{frame}
  
-\section{Purpose}
-\begin{frame}
-    \frametitle{Purpose}
-    \begin{itemize}
-        \item The purpose of SPE CSP7 study was to compare the results of simulations performed by different organizations, using different simulators on a problem invlolving production from a horizontal well.
-        \item The purpose of this project was to recreate the results of the SPE CSP7 study; specifically the ECL100 results.
-        \item Additionally, modifications were made to the model and the results compared to that of the original model.
-    \end{itemize}
-\end{frame}
-
+\input{presentationparts/purpose.tex}
 \input{presentationparts/model.tex}
-
-\begin{frame}
-    \frametitle{Cases}
-    \footnotesize
-    \begin{tabular}{llll}
-        \toprule
-        \textbf{Case} & \textbf{Producer length} & \textbf{Liquid production rate} & \textbf{Injection scheme} \\
-        \midrule
-        1a            & $900$ ft                   & $3000$                          & $p = 3700$ psia           \\
-        1b            & $2100$ ft                  & $3000$                          & $p = 3700$ psia           \\
-        2a            & $900$ ft                   & $6000$                          & $p = 3700$ psia           \\
-        2b            & $2100$ ft                  & $6000$                          & $p = 3700$ psia           \\
-        3a            & $900$ ft                   & $9000$                          & $p = 3700$ psia           \\
-        3b            & $2100$ ft                  & $9000$                          & $p = 3700$ psia           \\
-        4a            & $900$ ft                   & $9000$                          & $q_w = 6000$ stb/day      \\
-        4b            & $2100$ ft                  & $9000$                          & $q_w = 6000$ stb/day      \\
-        \bottomrule
-    \end{tabular}
-    \normalsize
-    \begin{itemize}
-        \item Cases 1-3 examine the effects of rates and well lengths on recovery.
-        \item In case 4 the voidage relpacement ratio is less than unity, leading to a substantial amount of gas comming out of solution.
-    \end{itemize}
-\end{frame}
-
-
-\begin{frame}
-    \centerline{
-    \includegraphics[width=1.15\textwidth]{figures/plots/combinations/fopt.pdf}}
-\end{frame}
-
-
-\begin{frame}
-    \frametitle{Deviations}
-    Total oil production in MSTB after 1500 days.
-
-    \vspace{2em}
-    
-    \footnotesize
-    \begin{columns}[c]
-        \column{1.1\textwidth}
-        \begin{tabular}{lllllllll}
-         \toprule
-         \textbf{Case}        & 1a     & 1b     & 2a     & 2b     & 3a     & 3b     & 4a     & 4b  \\
-         \midrule
-         \textbf{Paper\footnote{SPE-CSP7, ECL100 results}} & 757.2  & 951.0  & 1034.2 & 1251.0 & 1229.1 & 1444.8 & 696.7  & 827.4  \\
-         \midrule
-         \textbf{Orig.\footnote{Original $9\times 9\times 6$ grid}}  & 736.3  & 947.0  & 971.7  & 1222.7 & 1098.8 & 1364.9 & 674.6  & 824.1  \\
-         Deviation            & 2.8\%  &  0.4\% &  6.4\% &  2.3\% & 11.9\% &  5.9\% &  3.3\% &  0.4\%   \\
-         \midrule
-         \textbf{Ref.\footnote{Refined $13\times 11\times 8$ grid}}   & 702.6  & 924.5  & 923.8  & 1194.4 & 1048.7 & 1343.8 & 705.3  & 824.0  \\
-         Deviation            & 7.2\%   & 2.8\% &10.6\%  & 4.5\% &14.7\% & 7.0\% & 1.2\% & 0.4\%   \\
-         \bottomrule
-        \end{tabular}
-    \end{columns}
-\end{frame}
+\input{presentationparts/cases.tex}
+\input{presentationparts/sources.tex}
+\input{presentationparts/results.tex}
+\input{presentationparts/friction.tex}
+\input{presentationparts/coning.tex}
 
 
 
-\begin{frame}[fragile]
-	\frametitle{Sample frame title}
-	\begin{code}
-        \begin{verbatim}
-        this is code
-is it indented?
- nope...
-this is code
-is it indented?
- nope...
-        \end{verbatim}
-    \end{code}
-\end{frame}
 
 \begin{frame}
  In this slide \pause

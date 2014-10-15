@@ -13,7 +13,7 @@
     bar width=7pt,
     ]
     \addplot coordinates {(1a,757) (1b,951) (2a,1034) (2b,1251) (3a,1229) (3b,1445) (4a,696) (4b,827) };
-    \addplot coordinates {(1a,736) (1b,947) (2a,971)  (2b,1223) (3a,1099) (3b,1365) (4a,67) (4b,824) };
+    \addplot coordinates {(1a,736) (1b,947) (2a,971)  (2b,1223) (3a,1099) (3b,1365) (4a,705) (4b,824) };
     \addplot coordinates {(1a,703) (1b,925) (2a,923)  (2b,1194) (3a,1049) (3b,1344) (4a,705) (4b,824) };
     \legend{Paper,Original grid,Refined grid}
 \end{axis}

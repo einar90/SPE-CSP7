@@ -11,10 +11,16 @@
         ymin=0,
         xmin=0, xmax=1500,
         ]        
-        \addplot[color=gray, mark=o] table[  x=TIME, y=FOPT, col sep=comma, skip coords between index={0}{1}]{data/spe74a.csv}; 
-        \addlegendentry{4a};
+        \addplot[color=red, mark=o] table[  x=TIME, y=FOPT, col sep=comma, skip coords between index={0}{1}]{data/spe74a.csv}; 
+        \addlegendentry{4a: Original grid};
 
-        \addplot[color=gray, mark=x] table[  x=TIME, y=FOPT, col sep=comma, skip coords between index={0}{1}]{data/spe74b.csv}; 
-        \addlegendentry{4b};
+        \addplot[color=red, mark=o, dashed] table[  x=TIME, y=FOPT, col sep=comma, skip coords between index={0}{1}]{data/spe74a-refined.csv}; 
+        \addlegendentry{4a: Refined grid};
+
+        \addplot[color=blue, mark=x] table[  x=TIME, y=FOPT, col sep=comma, skip coords between index={0}{1}]{data/spe74b.csv}; 
+        \addlegendentry{4b: Original grid};
+
+        \addplot[color=blue, mark=x, dashed] table[  x=TIME, y=FOPT, col sep=comma, skip coords between index={0}{1}]{data/spe74b-refined.csv}; 
+        \addlegendentry{4b: Refined grid};
     \end{axis}
 \end{tikzpicture}

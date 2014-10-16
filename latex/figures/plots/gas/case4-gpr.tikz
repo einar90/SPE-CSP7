@@ -6,20 +6,20 @@
     \begin{axis}[
         xlabel={Time (days)},
         xtick={200,400,...,1600},
-        ylabel={WPR (stb/day)},
+        ylabel={GPR (scf/day)},
         xtick={200,400,...,1600},
         ymin=0,
         xmin=0, xmax=1500,
         ]        
         \addplot[color=red, mark=o] 
-                table[  x=TIME, y=WWPR:PROD, col sep=comma, skip coords between index={0}{1}]{data/spe74a.csv}; 
+                table[  x=TIME, y=FGPR, col sep=comma, skip coords between index={0}{1}]{data/spe74a.csv}; 
         \addplot[color=red, mark=o, dashed] 
-                table[  x=TIME, y=WWPR:PROD, col sep=comma, skip coords between index={0}{1}]{data/spe74a-refined.csv}; 
+                table[  x=TIME, y=FGPR, col sep=comma, skip coords between index={0}{1}]{data/spe74a-refined.csv}; 
 
         \addplot[color=blue, mark=o] 
-                table[  x=TIME, y=WWPR:PROD, col sep=comma, skip coords between index={0}{1}]{data/spe74b.csv}; 
+                table[  x=TIME, y=FGPR, col sep=comma, skip coords between index={0}{1}]{data/spe74b.csv}; 
         \addplot[color=blue, mark=o, dashed] 
-                table[  x=TIME, y=WWPR:PROD, col sep=comma, skip coords between index={0}{1}]{data/spe74b-refined.csv}; 
+                table[  x=TIME, y=FGPR, col sep=comma, skip coords between index={0}{1}]{data/spe74b-refined.csv}; 
 
         \addlegendentry{4a: Original grid};
         \addlegendentry{4a: Refined grid};

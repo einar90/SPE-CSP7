@@ -34,7 +34,7 @@ WFRICTN
 %==============================================================================
 \begin{frame}
     \frametitle{Friction: Model}
-    According to R.A. Archer \& E.O Agbongiator\footnote{R.A. Archer, E.O. Agbongiator. \emph{Correcting for Frictional Pressure Drop in Horizontal-Well Inflow-Performance Relationships}. Society of Petroleum Engineers, 2005}, wellbore pressure drops in horizontal wells may be modelled with equation \ref{eq:friction}.
+    According to R.A. Archer \& E.O Agbongiator\footnote{R.A. Archer, E.O. Agbongiator. \emph{Correcting for Frictional Pressure Drop in Horizontal-Well Inflow-Performance Relationships}. Society of Petroleum Engineers, 2005}, wellbore pressure drops in horizontal wells due to friction may be modelled with equation \ref{eq:friction}.
     \begin{equation}
         \label{eq:friction}
         \Delta p_f = \frac{C_f L f \rho q_f^2}{D^5}
@@ -75,6 +75,20 @@ WFRICTN
 \end{frame}
 %==============================================================================
 
+%==============================================================================
+\begin{frame}
+    \frametitle{Friction: Short vs. Long Wellbore}
+    \begin{itemize}
+        \item Friction drop across the long wellbore is $\approx 3$ times higher than across the short wellbore.
+        \item Drop from section-to-section in the short wellbore is higher than in the three first connections in the long wellbore due to a higher flow rate (approximately as high as in the end of the long wellbore).
+        \item Varies little over time.
+        \begin{itemize}
+            \item As expected becuse the liquid flow is more or less constant.
+            \item \emph{Slightly} higher at the start.
+        \end{itemize}
+    \end{itemize}
+\end{frame}
+%==============================================================================
 
 %==============================================================================
 \begin{frame}
@@ -87,6 +101,15 @@ WFRICTN
 \begin{frame}
     \frametitle{Friction: Pressure Drop Along Wellbore}
     \centerline{\input{figures/plots/friction/friction-short.tikz}}
+\end{frame}
+%==============================================================================
+
+%==============================================================================
+\begin{frame}
+    \frametitle{Friction: Pressure Drop Along Wellbore}
+    \begin{itemize}
+        \item As expected from the previous equation, a higher flow rate leads to a higher pressure drop.
+    \end{itemize}
 \end{frame}
 %==============================================================================
 

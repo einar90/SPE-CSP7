@@ -6,7 +6,7 @@
     \begin{axis}[
         xlabel={Time (days)},
         xtick={200,400,...,1600},
-        ylabel={Cum. Wat. Prod (stb/day)},
+        ylabel={Cum. Wat. Prod (stb)},
         xtick={200,400,...,1600},
         ymin=0,
         xmin=0, xmax=1500,

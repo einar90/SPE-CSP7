@@ -6,14 +6,19 @@
     \frametitle{Results: Cumulative oil production}
     \begin{itemize}
         \item Overall relatively good fit with results in paper.
+        \pause
         \item Results for cumulative oil recovery after 1500:
         \begin{itemize}
              \item Results for cases 1-3 are generally lower than in the paper, with deviations ranging from $0.4-14.7\%$ with the average error being $6.45\%$. 
+            \pause
              \item Numbers with the refined grid are lower than with the original grid. 
+            \pause
              \item The deviations for the cases with short wells are, overall, significantly higher than the deviations for long wells.
+            \pause
              \item Results for case 4 fit very well with the results in the paper, with deviations ranging from $0.4\%$ to $3.3\%$.
          \end{itemize} 
-         \item In the paper refined grid was not used for case 4. The results are shown here anyway.
+        \pause
+        \item In the paper refined grid was not used for case 4. The results for case 4 with the refined grid are shown here anyway.
     \end{itemize}
 \end{frame}
 %==============================================================================
@@ -59,7 +64,7 @@
 %==============================================================================
 
 %==============================================================================
-\begin{frame}[label=wor13]
+\begin{frame}
     \frametitle{Results: Water-Oil Ratio - Cases 1-3}
     \centerline{\input{figures/plots/water/wor-combined-refined.tikz}}
 \end{frame}
@@ -86,6 +91,12 @@
         \item WOR ratio is higher for all cases with short producing wells.
         \item Likely due to a greater tendency for coning.
         \item The cumulative water production will still be greater for the long wells because they produce more fluid overall.
+        \pause
+        \item Results from refined grid show an overall higher WOR.
+        \begin{itemize}
+            \item Possibly more accurate simulation of coning tendencies.
+            \item Contributes to the lower oil recovery.
+        \end{itemize}
     \end{itemize}
 \end{frame}
 %============================================================================== 
@@ -96,9 +107,10 @@
     \frametitle{Results: Case 4}
     \begin{itemize}
         \item In case 4 less liquid is injected than is being produced.
-        \item This causes the pressure to drop down to $P_{bp}$.
-        \item $P_{bp}$ is reached after approximately 600 days.
-        \item At $P_{bp}$ gas goes out of solution and sustains the pressure for the remaining time simulated.
+        \item This causes the pressure to drop, leading to gas being released from solution.
+        \item After some time the pressure drop stops at the set 1500 psi lower BHP limit.
+        \item Gas production drops to $\approx 0$ towards the end.
+        \item Oil and water prodction ``settles'' at a lower rate compared to case 3 due to lower reservoir pressure.
     \end{itemize}
 \end{frame}
 %============================================================================== 
@@ -121,7 +133,7 @@
 \end{frame}
 %==============================================================================
 
-\againframe{wor13}
+%\againframe{wor13}
 
 %==============================================================================
 \begin{frame}
@@ -155,17 +167,32 @@
 
 %==============================================================================
 \begin{frame}
-    \frametitle{Results: Gas-Oil Ratio - Case 4}
-    \centerline{\input{figures/plots/gas/case4-gor.tikz}}
+    \frametitle{Results: Cum. Gas Prod. - Case 4}
+    \centerline{\input{figures/plots/gas/combined-original-gpt.tikz}}
+\end{frame}
+%=============================================================================
+
+
+%==============================================================================
+\begin{frame}
+    \frametitle{Results: Fluid Production Rates - Case 4b}
+    \centerline{\input{figures/plots/combined/case4.tikz}}
 \end{frame}
 %==============================================================================
 
 %==============================================================================
 \begin{frame}
-    \frametitle{Results: Cum. Gas Prod. - Case 4}
-    \centerline{\input{figures/plots/gas/combined-original-gpt.tikz}}
+    \frametitle{Results: Fluid Production Rates - Case 3b \& 4b}
+    \centerline{\input{figures/plots/combined/case3-4.tikz}}
 \end{frame}
-%=============================================================================
+%==============================================================================
+
+%==============================================================================
+\begin{frame}
+    \frametitle{Results: Fluid Production Rates - Case 4a \& 4b}
+    \centerline{\input{figures/plots/combined/case4ab.tikz}}
+\end{frame}
+%==============================================================================
 
 
 %==============================================================================

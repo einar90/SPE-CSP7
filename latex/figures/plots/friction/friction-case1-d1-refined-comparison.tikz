@@ -10,15 +10,15 @@
         xtick={1,2,...,8},
         ]
         \addplot[color=red, mark=o] table[x=CONN, y=1A:D1:DROP, col sep=comma, skip coords between index={0}{4}]{data/cpr.csv};
-        \addlegendentry{1a};
+        \addlegendentry{1a: Original grid};
 
         \addplot[color=red, mark=o, dashed] table[x=CONN, y=REF:1A:D1:DROP, col sep=comma, skip coords between index={0}{4}]{data/cpr.csv};
-        \addlegendentry{1a (ref)};
+        \addlegendentry{1a: Refined grid};
 
         \addplot[color=blue, mark=o] table[x=CONN, y=1B:D1:DROP, col sep=comma]{data/cpr.csv};
-        \addlegendentry{1b};
+        \addlegendentry{1b: Original grid};
 
         \addplot[color=blue, mark=o, dashed] table[x=CONN, y=REF:1B:D1:DROP, col sep=comma]{data/cpr.csv};
-        \addlegendentry{1b (ref)};
+        \addlegendentry{1b: Refined grid};
     \end{axis}
 \end{tikzpicture}

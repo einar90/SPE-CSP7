@@ -2,7 +2,7 @@
 \begin{tikzpicture}[font = \sffamily]
 \pgfplotsset{legend style={legend columns=6}}
 \pgfplotsset{legend style={at={(0.5,-0.30)}, font=\footnotesize}}
-\pgfplotsset{width=1.0\textwidth, height=0.7\textheight}
+\pgfplotsset{width=1.0\textwidth, height=0.85\textheight}
     \begin{axis}[
         xlabel={Time (days)},
         ylabel={Cumulative Oil (stb)},

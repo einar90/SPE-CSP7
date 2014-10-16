@@ -7,7 +7,7 @@
         xlabel={Time (days)},
         ylabel={Cumulative Oil (stb)},
         xtick={200,400,...,1600},
-        ymin=0, 
+        ymin=0, ymax=1.5e6,
         xmin=0, xmax=1500,
         axis y line*=left,
         xlabel near ticks,

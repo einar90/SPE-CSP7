@@ -7,7 +7,7 @@
         xlabel={Time (days)},
         xtick={200,400,...,1600},
         ylabel={Cumulative Oil (stb)},
-        ymin=0,
+        ymin=0, ymax=1.5e6,
         xmin=0, xmax=1500,
         axis y line*=left,
         xlabel near ticks,
@@ -21,7 +21,7 @@
     \end{axis}
     \begin{axis}[
         ylabel={Oil rate (stb/day)},
-        ymin=0,
+        ymin=0, ymax=4000,
         xmin=0, xmax=1500,
         hide x axis,
         axis y line*=right,

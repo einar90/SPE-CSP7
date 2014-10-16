@@ -11,6 +11,7 @@
         \begin{itemize}
             \item The reservoir is undersaturated $\rightarrow$ no free gas.
         \end{itemize}
+        \pause
         \item Note that the porosity in the paper is given as
         \begin{equation}
             \phi = \phi^* [1 + c_\phi (p_o - p^*)],
@@ -73,8 +74,9 @@
         \item The model has two wells:
             \begin{itemize}
                 \item Producer in top layer.
-                \item Injector in bottom layer.
+                \item Injector in bottom layer. 
             \end{itemize}
+        \pause
         \item There are two variations on the model:
         \begin{itemize}
              \item short producing well with $L=900$ ft, spanning blocks $(I,5,1), I=6,7,8$.
@@ -92,12 +94,17 @@
     \frametitle{Refined Grid Model}
     \begin{itemize}
         \item The ECL100 section of the paper describes how they performed the simulation. It includes a Local Grid Refinement (LGR) around the producing well.
+        \pause
         \begin{itemize}
             \item The top layer is split into three new layers with $\Delta z = 8ft, 4ft, 8ft$. The middle layer contains the well.
+            \pause
             \item The original center row is split into three new rows with $\Delta y = 24ft, 12ft, 24ft$.
+            \pause
             \item Two blocks at each end of the producing well were refined into four new blocks with equal $\Delta x$ values.
+            \pause
         \end{itemize}
-        \item This results in \emph{two} different $13 \times 11 \times 8$ grids because the grid is refined differently for the two different well placements.
+        \item This results in \emph{two} different $13 \times 11 \times 8$ grids because the grid is refined differently for the two different well lengths.
+        \pause
         \item In the paper this is implemented using the LGR extension. I decided to refine the global grid.
     \end{itemize}
 \end{frame}
@@ -142,12 +149,14 @@
             \item Producer in second layer from the top.
             \item Injector in bottom layer.
         \end{itemize}
+        \pause
         \item Still two variations on the producer:
         \begin{itemize}
             \item short well with length $L=900$ ft, spanning blocks $(I,6,2), I=7,8,...,11$.
             \item long well with length $L=2100$ ft, spanning blocks $(I,6,2), I=3,4,...,11$.
         \end{itemize}
-        \item In both cases the injector spans $(I,6,2), I=1,2,...,13$.
+        \pause
+        \item In both cases the injector spans $(I,6,8), I=1,2,...,13$.
     \end{itemize}
 \end{frame}
 %==============================================================================

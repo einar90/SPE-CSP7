@@ -1,0 +1,20 @@
+% -*- root: ../../../plots.tex -*-
+\pgfplotsset{legend style={legend columns=2}}
+\begin{tikzpicture}
+    \begin{axis}[
+        xlabel={Time (days)},
+        xtick={200,400,...,1600},
+        ylabel={OPR+WPR (stb/day)},
+        xtick={200,400,...,1600},
+        xmin=0, xmax=1500,
+        ]        
+        \addplot[color=red, mark=o] 
+                table[  x=TIME, 
+                        y expr={\thisrow{FOPR} + \thisrow{FWPR}/1000}, 
+                        col sep=comma, skip coords between index={0}{1}
+                     ]
+                {data/spe71a.csv}; 
+
+        \addlegendentry{1a: Oil + Gas};
+    \end{axis}
+\end{tikzpicture}
